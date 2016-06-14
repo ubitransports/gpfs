@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Référence
                             </a>
@@ -41,8 +41,8 @@
                                 passenger_comments.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/passenger_tickets.txt.html">
                                 passenger_tickets.txt
                             </a>
@@ -93,79 +93,53 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
-<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transports.
-Cette norme à été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transports comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
-<p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
-<h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
-<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP. </p>
+                        <h1 id="passenger_ticketstxt">passenger_tickets.txt</h1>
+<p>Ce fichier défini les titres de transport attribués aux usagers définis dans le fichier <a href="passengers.txt.html">passengers.txt</a>. La notion comptable peut-être défini dans un fichier d'extension <a href="passenger_tickets.ext.txt.html">passenger_tickets.ext.txt</a>.</p>
+<h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
 <tr>
-<th>Nom du fichier</th>
+<th>Nom du champs</th>
 <th style="text-align: center;">Obligatoire</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="passengers.txt.html">passengers.txt</a></td>
+<td>ticket_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Informations concernant les usagers pouvant utiliser le réseau de transport.</td>
+<td>Le champ ticket_id est un identifiant unique qui identifie le titre de transport.</td>
 </tr>
 <tr>
-<td><a href="passenger_comments.txt.html">passenger_comments.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Commentaires additionnels associés à un usager.</td>
+<td>passenger_id</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ passenger_id est un identifiant unique qui identifie l'usager.</td>
 </tr>
 <tr>
-<td><a href="passenger_tutors.txt.html">passenger_tutors.txt</a></td>
+<td>fare_id</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Informations concernant le responsable légal d'un usager.</td>
+<td>Le champ fare_id est un identifiant unique qui identifie un tarif.</td>
 </tr>
 <tr>
-<td><a href="passenger_tickets.txt.html">passenger_tickets.txt</a></td>
+<td>ticket_start_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Titres de transport (tickets ou abonnements) attribués à un usager.</td>
+<td>Le champ ticket_start_on est la date début de validité du titre au format YYYYMMDDHHMMSS.</td>
 </tr>
 <tr>
-<td><a href="profiles.txt.html">profiles.txt</a></td>
+<td>ticket_end_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Définition des profils usager.</td>
+<td>Le champ ticket_end_on est la date fin de validité du titre au format YYYYMMDDHHMMSS.</td>
 </tr>
 <tr>
-<td><a href="passenger_profiles.txt.html">passenger_profiles.txt</a></td>
+<td>restrictions</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Association entre un profil et un usager.</td>
-</tr>
-<tr>
-<td><a href="schools.txt.html">schools.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Informations concernant les établissements scolaires fréquentés par un usager.</td>
-</tr>
-<tr>
-<td><a href="passenger_schools.txt.html">passenger_schools.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Association d'un établissement scolaire à un usager.</td>
-</tr>
-<tr>
-<td>pictures/</td>
-<td style="text-align: center;">Optionnel</td>
-<td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
+<td>Le champ restrictions permet de définir les restrictions dans l'espace et le temps au format JSON</td>
 </tr>
 </tbody>
 </table>
-<h2 id="prrequis">Prérequis</h2>
-<p>Les prérequis suivant s'appliquent au format et contenu des fichiers : </p>
-<ul>
-<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et dont les valeurs seront séparées par des virgules.  </li>
-<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champs est optionnel et non utilisé, la colonne peut être omise.</li>
-<li>Tous les noms de champs sont sensible à la casse.  </li>
-<li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
-<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.  </li>
-<li>Les fichiers doivent être encodés en UTF-8.  </li>
-<li>Les fichiers doivent être contenus dans un dossier compressé au format ZIP.</li>
-</ul>
+<h2 id="exemple-">Exemple :</h2>
+<pre><code>ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
+T0000001,P1,TU1,20160101000000,20160131235959,{"line":[1,2,3]}</code></pre>
                     </div>
 
                     <footer>

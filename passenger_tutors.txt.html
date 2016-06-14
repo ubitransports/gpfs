@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Référence
                             </a>
@@ -47,8 +47,8 @@
                                 passenger_tickets.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/passenger_tutors.txt.html">
                                 passenger_tutors.txt
                             </a>
@@ -93,79 +93,103 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
-<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transports.
-Cette norme à été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transports comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
-<p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
-<h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
-<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP. </p>
+                        <h1 id="passenger_tutorstxt">passenger_tutors.txt</h1>
+<p>Ce fichier contient les informations concernant les responsables légaux des usagers définis dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</p>
+<h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
 <tr>
-<th>Nom du fichier</th>
+<th>Nom du champs</th>
 <th style="text-align: center;">Obligatoire</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="passengers.txt.html">passengers.txt</a></td>
+<td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Informations concernant les usagers pouvant utiliser le réseau de transport.</td>
+<td>Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal.</td>
 </tr>
 <tr>
-<td><a href="passenger_comments.txt.html">passenger_comments.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Commentaires additionnels associés à un usager.</td>
+<td>tutor_firstname</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ firstname est le prénom du responsable légal.</td>
 </tr>
 <tr>
-<td><a href="passenger_tutors.txt.html">passenger_tutors.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Informations concernant le responsable légal d'un usager.</td>
+<td>tutor_lastname</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ lastname est le nom du responsable légal.</td>
 </tr>
 <tr>
-<td><a href="passenger_tickets.txt.html">passenger_tickets.txt</a></td>
+<td>tutor_gender_title</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Titres de transport (tickets ou abonnements) attribués à un usager.</td>
+<td>Le champ tutor_gender_title contient le titre du responsable légal (Exemple : Mme,Mlle,M.)</td>
 </tr>
 <tr>
-<td><a href="profiles.txt.html">profiles.txt</a></td>
+<td>tutor_parent_link</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Définition des profils usager.</td>
+<td>Le champ parent_link est le lien de parenté entre l'usager et le responsable légal. Les valeurs valides pour ce champ sont  :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.</td>
 </tr>
 <tr>
-<td><a href="passenger_profiles.txt.html">passenger_profiles.txt</a></td>
+<td>tutor_email</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Association entre un profil et un usager.</td>
+<td>Le champ email est l'adresse mail de contact du responsable légal.</td>
 </tr>
 <tr>
-<td><a href="schools.txt.html">schools.txt</a></td>
+<td>tutor_mobile_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Informations concernant les établissements scolaires fréquentés par un usager.</td>
+<td>Le champ email est le numéro de téléphone portable du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33600000000.</td>
 </tr>
 <tr>
-<td><a href="passenger_schools.txt.html">passenger_schools.txt</a></td>
+<td>tutor_home_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Association d'un établissement scolaire à un usager.</td>
+<td>Le champ email est le numéro de téléphone du domicile du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.</td>
 </tr>
 <tr>
-<td>pictures/</td>
+<td>tutor_work_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
+<td>Le champ email est le numéro de téléphone du travail du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.</td>
+</tr>
+<tr>
+<td>tutor_dateofbirth</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ dateofbirth est la date de naissance du responsable légal au format YYYYMMDD</td>
+</tr>
+<tr>
+<td>tutor_address_1</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ tutor_adress_1 est l'adresse du responsable légal</td>
+</tr>
+<tr>
+<td>tutor_address_2</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ tutor_adress_2 est un complément de l'adresse du responsable légal</td>
+</tr>
+<tr>
+<td>tutor_address_3</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ tutor_adress_3 est un complément de l'adresse du responsable légal</td>
+</tr>
+<tr>
+<td>tutor_address_zipcode</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ tutor_adress_zipcode est le code postal du responsable légal</td>
+</tr>
+<tr>
+<td>tutor_address_city</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ address_city est la ville d'habitation du responsable légal</td>
+</tr>
+<tr>
+<td>tutor_address_country</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ address_country est le pays d'habitation du responsable légal</td>
 </tr>
 </tbody>
 </table>
-<h2 id="prrequis">Prérequis</h2>
-<p>Les prérequis suivant s'appliquent au format et contenu des fichiers : </p>
-<ul>
-<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et dont les valeurs seront séparées par des virgules.  </li>
-<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champs est optionnel et non utilisé, la colonne peut être omise.</li>
-<li>Tous les noms de champs sont sensible à la casse.  </li>
-<li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
-<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.  </li>
-<li>Les fichiers doivent être encodés en UTF-8.  </li>
-<li>Les fichiers doivent être contenus dans un dossier compressé au format ZIP.</li>
-</ul>
+<h2 id="exemple-">Exemple :</h2>
+<pre><code>passenger_id,tutor_firstname,tutor_lastname,tutor_gender_title,tutor_parent_link,tutor_email,tutor_mobile_phone,tutor_home_phone,tutor_work_phone,tutor_dateofbirth,tutor_address_1,tutor_address_2,tutor_address_3,tutor_address_zipcode,tutor_address_city,tutor_address_country
+P1,Paul,Doe,M,2,paul.doe@gmail.com,+33600000000,,,19600601,36 rue du pont,,,71000,Mâcon,France</code></pre>
                     </div>
 
                     <footer>

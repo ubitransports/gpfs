@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="/index.html">
                                 Référence
                             </a>
@@ -65,8 +65,8 @@
                                 passenger_profiles.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="/schools.txt.html">
                                 schools.txt
                             </a>
@@ -93,79 +93,88 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
-<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transports.
-Cette norme à été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transports comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
-<p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
-<h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
-<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP. </p>
+                        <h1 id="schoolstxt">schools.txt</h1>
+<p>Ce fichier contient les informations concernant les établissements scolaires.</p>
+<h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
 <tr>
-<th>Nom du fichier</th>
+<th>Nom du champs</th>
 <th style="text-align: center;">Obligatoire</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="passengers.txt.html">passengers.txt</a></td>
+<td>school_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Informations concernant les usagers pouvant utiliser le réseau de transport.</td>
+<td>Le champ school_id est un identifiant unique de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="passenger_comments.txt.html">passenger_comments.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Commentaires additionnels associés à un usager.</td>
+<td>school_name</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ name est le nom de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="passenger_tutors.txt.html">passenger_tutors.txt</a></td>
-<td style="text-align: center;">Optionnel</td>
-<td>Informations concernant le responsable légal d'un usager.</td>
+<td>school_shortname</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ shortname est le nom court de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="passenger_tickets.txt.html">passenger_tickets.txt</a></td>
+<td>school_address_1</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Titres de transport (tickets ou abonnements) attribués à un usager.</td>
+<td>Le champ school_adress_1 est l'adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="profiles.txt.html">profiles.txt</a></td>
+<td>school_address_2</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Définition des profils usager.</td>
+<td>Le champ school_adress_2 est un complément de l'adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="passenger_profiles.txt.html">passenger_profiles.txt</a></td>
+<td>school_address_3</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Association entre un profil et un usager.</td>
+<td>Le champ school_adress_3 est un complément de l'adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="schools.txt.html">schools.txt</a></td>
+<td>school_address_zipcode</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Informations concernant les établissements scolaires fréquentés par un usager.</td>
+<td>Le champ school_adress_zipcode est le code postal de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td><a href="passenger_schools.txt.html">passenger_schools.txt</a></td>
+<td>school_address_city</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Association d'un établissement scolaire à un usager.</td>
+<td>Le champ address_city est la ville de l'établissement de l'établissement scolaire.</td>
 </tr>
 <tr>
-<td>pictures/</td>
+<td>school_address_country</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
+<td>Le champ address_country est le pays de l'établissement de l'établissement scolaire.</td>
+</tr>
+<tr>
+<td>school_email</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ email est l'adresse mail de contact de l'établissement de l'établissement scolaire.</td>
+</tr>
+<tr>
+<td>school_lat</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ school_lat permet de positionner l'établissement grâce à une position GPS. La latitude GPS doit être renseignée avec le système géodésique WGS 84 (<a href="https://fr.wikipedia.org/wiki/WGS_84">https://fr.wikipedia.org/wiki/WGS_84</a>).</td>
+</tr>
+<tr>
+<td>school_lon</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ school_lon permet de positionner l'établissement grâce à une position GPS. La longitude GPS rdoit être enseignée avec le système géodésique WGS 84 (<a href="https://fr.wikipedia.org/wiki/WGS_84">https://fr.wikipedia.org/wiki/WGS_84</a>)</td>
+</tr>
+<tr>
+<td>school_open_on</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Le champ open_on permet de définir les jours de la semaine où l'établissement est ouvert. Les valeurs valides pour chaque jour sont :  0 = Non et 1 = Oui.  Exemples : ouvert tous les jours de la semaine : 1111111, ouvert du lundi au vendredi : 1111100.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="prrequis">Prérequis</h2>
-<p>Les prérequis suivant s'appliquent au format et contenu des fichiers : </p>
-<ul>
-<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et dont les valeurs seront séparées par des virgules.  </li>
-<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champs est optionnel et non utilisé, la colonne peut être omise.</li>
-<li>Tous les noms de champs sont sensible à la casse.  </li>
-<li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
-<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.  </li>
-<li>Les fichiers doivent être encodés en UTF-8.  </li>
-<li>Les fichiers doivent être contenus dans un dossier compressé au format ZIP.</li>
-</ul>
+<h2 id="exemple">Exemple</h2>
+<pre><code>school_id,school_name,school_shortname,school_address_1,school_address_2,school_address_3,school_address_zipcode,school_address_city,school_address_country,school_email,school_lat,school_lon,school_open_on
+SCHOOL1,Lycée PSS,PSS,1 rue de la mairie,,,71000,Mâcon,France,lycee.pss@gmail.com,4.8313,46.3062,1111100</code></pre>
                     </div>
 
                     <footer>
