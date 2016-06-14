@@ -1,35 +1,37 @@
 title: GPFS Reference
 subTitle: General Passenger Feed Specification Reference
+baseUrl: http://ubitransports.github.io/gpfs
 
 include:
     - src
 
 template:
-    url: https://github.com/CouscousPHP/Template-ReadTheDocs
+    #url: https://github.com/CouscousPHP/Template-ReadTheDocs
+    directory: website
    
 menu:
     items:
-        home:
-            text: Reference
+        index:
+            text: Référence
             relativeUrl: index.html
         passengers.txt:
             text: passengers.txt
             relativeUrl: passengers.txt.html
-        passenger_tutors.txt:
-            text: passenger_tutors.txt
-            relativeUrl: passenger_tutors.txt.html
-        passenger_profiles.txt:
-            text: passenger_profiles.txt
-            relativeUrl: passenger_profiles.txt.html
-        profiles.txt:
-            text: profiles.txt
-            relativeUrl: profiles.txt.html
         passenger_comments.txt:
             text: passenger_comments.txt
             relativeUrl: passenger_comments.txt.html
         passenger_tickets.txt:
             text: passenger_tickets.txt
             relativeUrl: passenger_tickets.txt.html
+        passenger_tutors.txt:
+            text: passenger_tutors.txt
+            relativeUrl: passenger_tutors.txt.html
+        profiles.txt:
+            text: profiles.txt
+            relativeUrl: profiles.txt.html
+        passenger_profiles.txt:
+            text: passenger_profiles.txt
+            relativeUrl: passenger_profiles.txt.html
         schools.txt:
             text: schools.txt
             relativeUrl: schools.txt.html

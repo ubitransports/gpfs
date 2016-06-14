@@ -1,18 +1,24 @@
+---
+currentMenu: passenger_schools.txt
+---
+
 # passenger_schools.txt
 
-## Fields description 
+Ce fichier contient les associations entre les établissements scolaires ([schools.txt](schools.txt.html)) et les usagers ([passengers.txt](passengers.txt.html)).
 
-| Field Name      | Required     |  Details |
+## Description des colonnes
+
+| Nom du champs      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
-| passenger_id    | **Required** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| school_id       | **Required** | Le champ school_id est un identifiant unique de l'établissement scolaire.  |
-| intership_type  | **Required** | Le champ intership_type est le régime de l'usager |
-| class_level     | **Required** | Le champ class_level est le nom de la classe ou niveau de l'usager. Exemple : Terminal  |
+| passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
+| school_id       | **Obligatoire** | Le champ school_id est un identifiant unique de l'établissement scolaire.  |
+| intership_type  | **Obligatoire** | Le champ intership_type est le régime de l'usager. Les valeurs valides pour ce champ sont :  0 = Non communiqué, 1 = interne, 2 = demi-pensionnaire, 3 = externe |
+| class_level     | **Obligatoire** | Le champ class_level est le nom de la classe ou niveau de l'usager. Exemple : Terminal  |
 
-##Example : 
+##Exemple : 
 
 ```
-passenger_id, school_id, intership_type, class_level
-P1, SCHOOL1, 0, Terminal
-P2, SCHOOL2, 0, Seconde
+passenger_id,school_id,intership_type,class_level
+P1,SCHOOL1,2,Terminal
+P2,SCHOOL2,2,Seconde
 ```

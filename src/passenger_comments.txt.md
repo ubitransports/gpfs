@@ -1,15 +1,23 @@
+---
+currentMenu: passenger_comments.txt
+---
+
 # passenger_comments.txt
 
-## Fields description 
+Ce fichier contient les commentaires additionnels associés aux usagers définis dans le fichier [passengers.txt](passengers.txt.html).
 
-| Field Name      |  Required    |  Details |
+## Description des colonnes
+
+| Nom du champs      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
-| passenger_id    | **Required** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| comment         | **Required** | Le champ comments est un commentaire associé à l'usager.  |
+| passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
+| comment         | **Obligatoire** | Le champ comments est un commentaire associé à l'usager.  |
 
-##Example : 
+##Exemple : 
 
 ```
-passenger_id, comment
-P1, Thisis a comment on passenger 1
+passenger_id,comment
+P1,This is a comment on passenger 1
+P1,This is another comment on passenger 1
+P2,"Lost his bag, please contact him if you find it"
 ```
