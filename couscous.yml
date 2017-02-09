@@ -2,13 +2,17 @@ title: GPFS Reference
 subTitle: General Passenger Feed Specification Reference
 baseUrl: http://ubitransports.github.io/gpfs
 
+github:
+    user: ubitransports
+    repo: gpfs
+
 include:
     - src
 
 template:
     #url: https://github.com/CouscousPHP/Template-ReadTheDocs
     directory: website
-   
+
 menu:
     items:
         index:
@@ -20,6 +24,9 @@ menu:
         passenger_comments.txt:
             text: passenger_comments.txt
             relativeUrl: passenger_comments.txt.html
+        passenger_tags.txt:
+            text: passenger_tags.txt
+            relativeUrl: passenger_tags.txt.html
         passenger_tickets.txt:
             text: passenger_tickets.txt
             relativeUrl: passenger_tickets.txt.html
