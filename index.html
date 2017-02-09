@@ -43,6 +43,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/passenger_tags.txt.html">
+                                passenger_tags.txt
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/passenger_tickets.txt.html">
                                 passenger_tickets.txt
                             </a>
@@ -94,11 +100,11 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
-<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transports.
-Cette norme à été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transports comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
+<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transport.
+Cette norme a été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transport comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
 <p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
 <h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
-<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP. </p>
+<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP.</p>
 <table>
 <thead>
 <tr>
@@ -149,6 +155,11 @@ Cette norme à été mise en place afin de simplifier la <strong>transmission de
 <td>Association d'un établissement scolaire à un usager.</td>
 </tr>
 <tr>
+<td><a href="passenger_tags.txt.html">passenger_tags.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Définition des cartes associées à un usager.</td>
+</tr>
+<tr>
 <td>pictures/</td>
 <td style="text-align: center;">Optionnel</td>
 <td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
@@ -156,20 +167,25 @@ Cette norme à été mise en place afin de simplifier la <strong>transmission de
 </tbody>
 </table>
 <h2 id="prrequis">Prérequis</h2>
-<p>Les prérequis suivant s'appliquent au format et contenu des fichiers : </p>
+<p>Les prérequis suivants s'appliquent au format et contenu des fichiers :</p>
 <ul>
-<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et dont les valeurs seront séparées par des virgules.  </li>
-<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champs est optionnel et non utilisé, la colonne peut être omise.</li>
-<li>Tous les noms de champs sont sensible à la casse.  </li>
+<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.</li>
+<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non utilisé, la colonne peut être omise.</li>
+<li>Tous les noms de champs sont sensibles à la casse.</li>
 <li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
-<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.  </li>
-<li>Les fichiers doivent être encodés en UTF-8.  </li>
+<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.</li>
+<li>Les fichiers doivent être encodés en UTF-8.</li>
 <li>Les fichiers doivent être contenus dans un dossier compressé au format ZIP.</li>
 </ul>
                     </div>
 
                     <footer>
                         <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
+                                </p>
+                            </div>
                                                 GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
                         Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
                     </footer>

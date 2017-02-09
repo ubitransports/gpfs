@@ -43,6 +43,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/passenger_tags.txt.html">
+                                passenger_tags.txt
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/passenger_tickets.txt.html">
                                 passenger_tickets.txt
                             </a>
@@ -94,12 +100,12 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="profilestxt">profiles.txt</h1>
-<p>Ce fichier défini la liste des profils appliqués sur le réseau de transport. Il existe 3 types de profil différents : les profils basés sur une période, les profils basés sur l'age de l'usager et le profil anonyme (<a href="#types-de-profil">détails</a>). </p>
+<p>Ce fichier définit la liste des profils appliqués sur le réseau de transport. Il existe 3 types de profil différents : les profils basés sur une période, les profils basés sur l'âge de l'usager et le profil anonyme (<a href="#types-de-profil">détails</a>). </p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
 <tr>
-<th>Nom du champs</th>
+<th>Nom du champ</th>
 <th style="text-align: center;">Obligatoire</th>
 <th>Description</th>
 </tr>
@@ -128,17 +134,17 @@
 <tr>
 <td>profil_age_start</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ profil_age_start est l'age minimum pour être associé automatiquement à ce profil.</td>
+<td>Le champ profil_age_start est l'âge minimum pour être associé automatiquement à ce profil.</td>
 </tr>
 <tr>
 <td>profil_age_end</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ profil_age_end est l'age maximum pour être associé automatiquement à ce profil.</td>
+<td>Le champ profil_age_end est l'âge maximum pour être associé automatiquement à ce profil.</td>
 </tr>
 <tr>
 <td>profil_anonymous</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ profil_anonymous permet de définir le profil usagers comme anonyme. Les valeurs valides pour ce champ sont : 0 ou rien = NON, 1 = OUI</td>
+<td>Le champ profil_anonymous permet de définir le profil usager comme anonyme. Les valeurs valides pour ce champ sont : 0 ou rien = NON, 1 = OUI</td>
 </tr>
 </tbody>
 </table>
@@ -154,20 +160,25 @@ ANONYMOUS,Anonymous,,,,,1</code></pre>
 PROFILE_1,"Toute l'année",20160101,20161231
 PROFILE_2,"A partir du 1er Janvier 2016",20160101,
 PROFILE_3,"Jusqu'au 31 Décembre 2016",,20161231</code></pre>
-<h3 id="profil-bas-sur-lage">Profil basé sur l'age</h3>
+<h3 id="profil-bas-sur-lge">Profil basé sur l'âge</h3>
 <p>En plus des champs obligatoires, les champs <code>profil_age_start</code> et/ou <code>profil_age_end</code> doivent être définis. Voir les exemples ci-dessous :  </p>
 <pre><code>profile_id,profil_name,profil_age_start,profil_age_end
 PROFILE_1,"De 5 ans à 18 ans",5,18
 PROFILE_2,"Jusqu'a 18 ans",,18
 PROFILE_3,"A partir de 5 ans",5,</code></pre>
 <h3 id="profil-anonyme">Profil anonyme</h3>
-<p>En plus des champs obligatoires, le champs <code>profil_anonymous</code> doit être définis. Voir l'exemple ci-dessous :  </p>
+<p>En plus des champs obligatoires, le champ <code>profil_anonymous</code> doit être défini. Voir l'exemple ci-dessous :  </p>
 <pre><code>profile_id,profil_name,profil_anonymous
 PROFILE_1,Anonyme,1</code></pre>
                     </div>
 
                     <footer>
                         <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
+                                </p>
+                            </div>
                                                 GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
                         Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
                     </footer>
