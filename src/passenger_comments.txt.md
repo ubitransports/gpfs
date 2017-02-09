@@ -8,7 +8,7 @@ Ce fichier contient les commentaires additionnels associés aux usagers définis
 
 ## Description des colonnes
 
-| Nom du champs      |  Obligatoire    |  Description |
+| Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
 | passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
 | comment         | **Obligatoire** | Le champ comments est un commentaire associé à l'usager.  |

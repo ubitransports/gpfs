@@ -4,11 +4,11 @@ currentMenu: passenger_tickets.txt
 
 # passenger_tickets.txt
 
-Ce fichier défini les titres de transport attribués aux usagers définis dans le fichier [passengers.txt](passengers.txt.html). La notion comptable peut-être défini dans un fichier d'extension [passenger_tickets.ext.txt](passenger_tickets.ext.txt.html).
+Ce fichier définit les titres de transport attribués aux usagers définis dans le fichier [passengers.txt](passengers.txt.html). La notion comptable peut être saisie dans un fichier d'extension [passenger_tickets.ext.txt](passenger_tickets.ext.txt.html).
 
 ## Description des colonnes
 
-| Nom du champs      |  Obligatoire    |  Description |
+| Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
 | ticket_id       | **Obligatoire** | Le champ ticket_id est un identifiant unique qui identifie le titre de transport. |
 | passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |

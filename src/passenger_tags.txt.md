@@ -8,13 +8,13 @@ Ce fichier contient les informations concernant les cartes des usagers ou des é
 
 ## Description des colonnes
 
-| Nom du champs          |  Obligatoire    |  Description |
+| Nom du champ          |  Obligatoire    |  Description |
 |------------------------|:------------:|----------|
 | tag_id                 | **Obligatoire** |  Le champ tag_id est un identifiant unique de la carte. |
-| passenger_id           | **Obligatoire** |  Le champ passenger_id identifie l'usager qui détient cette carte, ce champs est défini dans le fichier [passengers.txt](passengers.txt.html). |
+| passenger_id           | **Obligatoire** |  Le champ passenger_id identifie l'usager qui détient cette carte, ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
 | rfid_uuid              | **Obligatoire** |  Le champ rfid_uuid est l'identifiant physique de la carte, il doit être unique. |
 | uuid_format            | optionnel       |  Le champ uuid_format indique si la valeur du champs rfid_uuid est au format hexadécimal ou décimal|
-| delivery_date          | optionnel       |  date de délivrance de la carte au format YYYYMMDD.|
+| delivery_date          | optionnel       |  date de remise de la carte au format YYYYMMDD.|
 | validity_end           | optionnel       |  date prévisionnelle de fin de validité de la carte au format YYYYMMDD.|
 | disabled_date          | optionnel       |  date effective de désactivation de la carte au format YYYYMMDD.|
 | disabled_cause         | optionnel       |  indication sur les raisons de la désactivation. la carte est perdue, volée, cassée... |
@@ -22,7 +22,7 @@ Ce fichier contient les informations concernant les cartes des usagers ou des é
 ## Format des dates :
 * **YYYYMMDD**           : Année sur 4 chiffres, mois sur 2 chiffres et jour sur 2 chiffres.
 
-## Valeurs du champs "uuid_format" :
+## Valeurs du champ "uuid_format" :
 
 * **HEX** ou Vide : *Hexadécimal*.
 * **DEC** : *Décimal*.
@@ -32,7 +32,7 @@ Ce fichier contient les informations concernant les cartes des usagers ou des é
 * **LOST**           : *Carte perdue*.
 * **STOLEN**         : *Carte volée*.
 * **BROKEN**         : *Carte cassée*.
-* **DEFECT**         : *Carte defectueuse*.
+* **DEFECT**         : *Carte défectueuse*.
 * **VALIDITY_ENDED** : *Carte périmée*.
 * **OTHER**          : *motif indéterminé*.
 

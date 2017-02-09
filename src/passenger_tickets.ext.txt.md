@@ -8,12 +8,12 @@ Ce fichier est un complément au fichier [passenger_tickets.txt](passenger_ticke
 
 ## Description des colonnes
 
-| Nom du champs   |  Obligatoire    |  Description |
+| Nom du champ   |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
 | ticket_id       | **Obligatoire** | Le champ ticket_id est un identifiant unique qui identifie le titre de transport. |
-| price           |  Optionnel    | Le champ price est est le prix TTC du titre en centime. |
-| amount          |  Optionnel    | Le champ amount est le montant déjà perçu en centime.  |
-| payment_detail  |  Optionnel    | Le champ payment_detail est d'ajouter un commentaire au réglement.  |
+| price           |  Optionnel    | Le champ price est est le prix TTC du titre en centimes. |
+| amount          |  Optionnel    | Le champ amount est le montant déjà perçu en centimes.  |
+| payment_detail  |  Optionnel    | Le champ payment_detail permet d'ajouter un commentaire au réglement.  |
 
 ## Exemple : 
 ```

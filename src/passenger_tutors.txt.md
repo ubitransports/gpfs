@@ -8,12 +8,12 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 
 ## Description des colonnes
 
-| Nom du champs      |  Obligatoire    |  Description |
+| Nom du champ      |  Obligatoire    |  Description |
 |-----------------------|:-----------:|----------|
 | passenger_id          |  **Obligatoire**   | Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal. |
 | tutor_firstname       |  **Obligatoire**   | Le champ firstname est le prénom du responsable légal. |
 | tutor_lastname        |  **Obligatoire**   | Le champ lastname est le nom du responsable légal. |
-| tutor_gender_title    |  Optionnel   | Le champ tutor_gender_title contient le titre du responsable légal (Exemple : Mme,Mlle,M.)|
+| tutor_gender_title    |  Optionnel   | Le champ tutor_gender_title contient le titre du responsable légal (Exemple : Mme, Mlle, M.)|
 | tutor_parent_link     |  Optionnel   | Le champ parent_link est le lien de parenté entre l'usager et le responsable légal. Les valeurs valides pour ce champ sont  :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.|
 | tutor_email           |  Optionnel   | Le champ email est l'adresse mail de contact du responsable légal.|
 | tutor_mobile_phone    |  Optionnel   | Le champ email est le numéro de téléphone portable du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33600000000.|

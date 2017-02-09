@@ -10,7 +10,7 @@ Ce fichier contient les informations concernant les usagers pouvant utiliser le 
 
 ## Description des colonnes
 
-| Nom du champs             |  Obligatoire     |  Description |
+| Nom du champ             |  Obligatoire     |  Description |
 |---------------------------|:----------------:|--------------|
 | passenger_id              |  **Obligatoire** |  Le champ passenger_id est un identifiant unique qui identifie l'usager. | 
 | passenger_file_number     |  **Obligatoire** |  Le champ file_number est le numéro de dossier de l'usager. | 
@@ -28,7 +28,7 @@ Ce fichier contient les informations concernant les usagers pouvant utiliser le 
 | passenger_address_zipcode |  Optionnel       |  Le champ adress_zipcode est le code postal de l'usager | 
 | passenger_address_city    |  Optionnel       |  Le champ address_city est la ville d'habitation de l'usager | 
 | passenger_address_country |  Optionnel       |  Le champ address_country est le pays d'habitation de l'usager | 
-| passenger_picture_name    |  Optionnel       |  Le champ picture_name est le nom de l'image à associé au profil de l'usager avec son extention. Les images seront à placer dans un dossier "pictures" à coté des fichiers .txt | 
+| passenger_picture_name    |  Optionnel       |  Le champ picture_name est le nom de l'image à associer au profil de l'usager avec son extention. Les images seront à placer dans un dossier "pictures" à coté des fichiers .txt | 
 
 
 ## Exemple : 

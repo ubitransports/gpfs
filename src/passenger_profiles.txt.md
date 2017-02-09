@@ -8,7 +8,7 @@ Ce fichier contient les associations entre les profils ([profiles.txt](profiles.
 
 ## Description des colonnes
 
-| Nom du champs      |  Obligatoire    |  Description |
+| Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:-----------:|----------|
 | passenger_id    |**Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
 | profil_id       |**Obligatoire** | Le champ profil_id est le nom du profil associé à l'usager. |
