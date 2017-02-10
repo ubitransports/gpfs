@@ -122,14 +122,14 @@
 <td>Le champ passenger_id identifie l'usager qui détient cette carte, ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
 </tr>
 <tr>
-<td>rfid_uuid</td>
+<td>uuid</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ rfid_uuid est l'identifiant physique de la carte, il doit être unique.</td>
+<td>Le champ uuid est l'identifiant physique de la carte, il doit être unique.</td>
 </tr>
 <tr>
 <td>uuid_format</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ uuid_format indique si la valeur du champs rfid_uuid est au format hexadécimal ou décimal</td>
+<td>Le champ uuid_format indique si la valeur du champs uuid est au format hexadécimal ou décimal</td>
 </tr>
 <tr>
 <td>delivery_date</td>
@@ -172,7 +172,7 @@
 <li><strong>OTHER</strong>          : <em>motif indéterminé</em>.</li>
 </ul>
 <h2 id="exemple">Exemple</h2>
-<pre><code>tag_id,passenger_id,rfid_uuid,uuid_format,delivery_date,validity_end,disabled_date,disabled_cause
+<pre><code>tag_id,passenger_id,uuid,uuid_format,delivery_date,validity_end,disabled_date,disabled_cause
 1,1,0123456789ABCDEF,HEX,,,,
 2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN
 </code></pre>
