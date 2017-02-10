@@ -18,12 +18,12 @@ Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier co
 | [passengers.txt](passengers.txt.html)                 | **Obligatoire** | Informations concernant les usagers pouvant utiliser le réseau de transport. |
 | [passenger_comments.txt](passenger_comments.txt.html) | Optionnel       | Commentaires additionnels associés à un usager. |
 | [passenger_tutors.txt](passenger_tutors.txt.html)     | Optionnel       | Informations concernant le responsable légal d'un usager. |
+| [passenger_tags.txt](passenger_tags.txt.html)         | Optionnel       | Définition des cartes associées à un usager.
 | [passenger_tickets.txt](passenger_tickets.txt.html)   | Optionnel       | Titres de transport (tickets ou abonnements) attribués à un usager. |
 | [profiles.txt](profiles.txt.html)                     | Optionnel       | Définition des profils usager. |
 | [passenger_profiles.txt](passenger_profiles.txt.html) | Optionnel       | Association entre un profil et un usager. |
 | [schools.txt](schools.txt.html)                       | Optionnel       | Informations concernant les établissements scolaires fréquentés par un usager. |
 | [passenger_schools.txt](passenger_schools.txt.html)   | Optionnel       | Association d'un établissement scolaire à un usager.  |
-| [passenger_tags.txt](passenger_tags.txt.html)         | Optionnel       | Définition des cartes associées à un usager.
 | pictures/                                             | Optionnel       | Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt. |
 
 ## Prérequis
