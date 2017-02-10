@@ -122,14 +122,14 @@
 <td>Le champ passenger_id identifie l'usager qui détient cette carte, ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
 </tr>
 <tr>
-<td>uuid</td>
+<td>uid</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ uuid est l'identifiant physique de la carte, il doit être unique.</td>
+<td>Le champ uid est l'identifiant physique de la carte, il doit être unique.</td>
 </tr>
 <tr>
-<td>uuid_format</td>
+<td>uid_format</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ uuid_format indique si la valeur du champs uuid est au format hexadécimal ou décimal</td>
+<td>Le champ uid_format indique si la valeur du champs uid est au format hexadécimal ou décimal</td>
 </tr>
 <tr>
 <td>delivery_date</td>
@@ -157,7 +157,7 @@
 <ul>
 <li><strong>YYYYMMDD</strong>           : Année sur 4 chiffres, mois sur 2 chiffres et jour sur 2 chiffres.</li>
 </ul>
-<h2 id="valeurs-du-champ-quotuuid_formatquot-">Valeurs du champ &quot;uuid_format&quot; :</h2>
+<h2 id="valeurs-du-champ-quotuid_formatquot-">Valeurs du champ &quot;uid_format&quot; :</h2>
 <ul>
 <li><strong>HEX</strong> ou Vide : <em>Hexadécimal</em>.</li>
 <li><strong>DEC</strong> : <em>Décimal</em>.</li>
@@ -172,7 +172,7 @@
 <li><strong>OTHER</strong>          : <em>motif indéterminé</em>.</li>
 </ul>
 <h2 id="exemple">Exemple</h2>
-<pre><code>tag_id,passenger_id,uuid,uuid_format,delivery_date,validity_end,disabled_date,disabled_cause
+<pre><code>tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause
 1,1,0123456789ABCDEF,HEX,,,,
 2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN
 </code></pre>
