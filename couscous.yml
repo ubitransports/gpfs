@@ -18,6 +18,10 @@ menu:
         index:
             text: Référence
             relativeUrl: index.html
+        revision:
+            text: Changelog
+            relativeUrl: revision.html
+        separator:
         passengers.txt:
             text: passengers.txt
             relativeUrl: passengers.txt.html
