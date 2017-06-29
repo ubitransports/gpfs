@@ -49,3 +49,12 @@ menu:
         passenger_schools.txt:
             text: passenger_schools.txt
             relativeUrl: passenger_schools.txt.html
+        bookings.txt:
+            text: bookings.txt
+            relativeUrl: bookings.txt.html
+        calendars.txt:
+            text: calendars.txt
+            relativeUrl: calendars.txt.html
+        calendar_dates.txt:
+            text: calendar_dates.txt
+            relativeUrl: calendar_dates.txt.html
