@@ -47,8 +47,8 @@
                                 passengers.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/passenger_comments.txt.html">
                                 passenger_comments.txt
                             </a>
@@ -107,8 +107,8 @@
                                 calendars.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="http://ubitransports.github.io/gpfs/calendar_dates.txt.html">
                                 calendar_dates.txt
                             </a>
@@ -129,8 +129,8 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="passenger_commentstxt">passenger_comments.txt</h1>
-<p>Ce fichier contient les commentaires additionnels associés aux usagers définis dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</p>
+                        <h1 id="calendar_datestxt">calendar_dates.txt</h1>
+<p>Ce fichier contient les informations concernant les dates à inclure ou exclure d'un calendrier défini dans le fichier <a href="calendars.txt.html">calendars.txt</a>.</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
@@ -142,22 +142,31 @@
 </thead>
 <tbody>
 <tr>
-<td>passenger_id</td>
+<td>date_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id est un identifiant unique qui identifie l'usager.</td>
+<td>Le champ date_id est un identifiant unique qui identifie une date à inclure ou exclure d'un calendrier.</td>
 </tr>
 <tr>
-<td>comment</td>
+<td>calendar_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ comments est un commentaire associé à l'usager.</td>
+<td>Le champ calendar_id est un identifiant unique qui identifie un calendrier.</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ date définit la date au format YYYYMMDD.</td>
+</tr>
+<tr>
+<td>exception_type</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Le champ exception_type si la date doit être incluse ou exclue au calendrier lié. Les valeurs valides pour ce champ sont  :  1 = inclus et 2 = exclu.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="exemple-">Exemple :</h2>
-<pre><code>passenger_id,comment
-P1,This is a comment on passenger 1
-P1,This is another comment on passenger 1
-P2,"Lost his bag, please contact him if you find it"</code></pre>
+<pre><code>date_id,calendar_id,date,exception_type
+D1,C1,20170101,1
+D2,C2,20170101,2</code></pre>
                     </div>
 
                     <footer>
