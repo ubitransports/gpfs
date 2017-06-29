@@ -17,8 +17,13 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 | destination_stoppoint_id  | optionnel       | Le champ origin_stoppoint_id est la référence l'arrêt de déscente présente sur le cloud ou dans le GTFS. |
 | start_date                | optionnel       | Le champ start_date définit la date de début de validité de la réservation au format YYYYMMDD. |
 | end_date                  | optionnel       | Le champ end_date définit la date de fin de validité de la réservation au format YYYYMMDD. |
-| days                      | optionnel       | Le champ days défini les jours de fonctionnement de la réservation au format numérique. Par exemple pour une réservation active que le ou les mercredis : 0010000 ou que les week-ends : 0000011. Par défaut tous les jours sont actifs (1111111) |
-| calendar_id               | optionnel       | Le champ calendar_id est un identifiant unique qui identifie un calendrier de fonctionnement. |
+| days                      | optionnel       | Le champ days définit les jours de fonctionnement de la réservation au format numérique. Par exemple pour une réservation active que le ou les mercredis : 0010000 ou que les week-ends : 0000011. Par défaut tous les jours sont actifs (1111111) |
+| calendar_id               | optionnel       | Le champ calendar_id est un identifiant unique qui identifie un calendrier de fonctionnement. |  
+  
+  
+Pour définir la période de validité d'une réservation, vous avez deux possibilités de la renseigner :  
+* soit via les champs start_date, end_date et days
+* soit via le champ calendar_id qui sera en lien avec le fichier [calendrier](calendars.txt).
 
 ##Exemple : 
 

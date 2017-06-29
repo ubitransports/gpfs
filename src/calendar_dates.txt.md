@@ -12,7 +12,7 @@ Ce fichier contient les informations concernant les dates à inclure ou exclure 
 |---------------------------|:---------------:|--------------|
 | date_id                   | **Obligatoire** | Le champ date_id est un identifiant unique qui identifie une date à inclure ou exclure d'un calendrier.|
 | calendar_id               | **Obligatoire** | Le champ calendar_id est un identifiant unique qui identifie un calendrier.|
-| date                      | **Obligatoire** | Le champ date défini la date au format YYYYMMDD. |
+| date                      | **Obligatoire** | Le champ date définit la date au format YYYYMMDD. |
 | exception_type            | **Obligatoire** | Le champ exception_type si la date doit être incluse ou exclue au calendrier lié. Les valeurs valides pour ce champ sont  :  1 = inclus et 2 = exclu.|
 
 
