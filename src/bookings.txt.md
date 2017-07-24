@@ -12,7 +12,7 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 |---------------------------|:---------------:|--------------|
 | booking_id                | **Obligatoire** | Le champ booking_id est un identifiant unique qui identifie une réservation.|
 | passenger_id              | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| trip_id                   | **Obligatoire** | Le champ trip_id est la référence d'une course présente sur le cloud ou dans le GTFS | 
+| trip_id                   | **Obligatoire** | Le champ trip_id est la référence d'une course présente sur le cloud ou dans le GTFS |
 | origin_stoppoint_id       | optionnel       | Le champ origin_stoppoint_id est la référence l'arrêt de montée présente sur le cloud ou dans le GTFS. |
 | destination_stoppoint_id  | optionnel       | Le champ origin_stoppoint_id est la référence l'arrêt de déscente présente sur le cloud ou dans le GTFS. |
 | start_date                | optionnel       | Le champ start_date définit la date de début de validité de la réservation au format YYYYMMDD. |
@@ -25,7 +25,9 @@ Pour définir la période de validité d'une réservation, vous avez deux possib
 * soit via les champs start_date, end_date et days
 * soit via le champ calendar_id qui sera en lien avec le fichier [calendrier](calendars.txt).
 
-##Exemple : 
+  si le champs calendar_id est renseigné, il sera pris en priorité pour définir la période de validité
+
+##Exemple :
 
 ```
 booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id
