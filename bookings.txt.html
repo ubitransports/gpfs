@@ -191,7 +191,10 @@
 <p>Pour définir la période de validité d'une réservation, vous avez deux possibilités de la renseigner :  </p>
 <ul>
 <li>soit via les champs start_date, end_date et days</li>
-<li>soit via le champ calendar_id qui sera en lien avec le fichier <a href="calendars.txt">calendrier</a>.</li>
+<li>
+<p>soit via le champ calendar_id qui sera en lien avec le fichier <a href="calendars.txt">calendrier</a>.</p>
+<p>si le champs calendar_id est renseigné, il sera pris en priorité pour définir la période de validité</p>
+</li>
 </ul>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id
