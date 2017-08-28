@@ -20,8 +20,8 @@ Ce fichier contient les informations concernant les usagers pouvant utiliser le 
 | passenger_dateofbirth     |  Optionnel       |  Le champ dateofbirth est la date de naissance de l'usager au format YYYYMMDD | 
 | passenger_gender          |  Optionnel       |  Le champ gender spécifie le sexe de l'usager.  Les valeurs valides pour ce champ sont :  0 = Non communiqué, 1 = homme, 2 = femme | 
 | passenger_email           |  Optionnel       |  Le champ email est l'adresse mail de contact de l'usager | 
-| passenger_mobile_phone    |  Optionnel       |  Le champ email est le numéro de téléphone portable de l'usager. Ce numéro de téléphone doit être au format international. Par exemple +33600000000. | 
-| passenger_home_phone      |  Optionnel       |  Le champ email est le numéro de téléphone du domicile de l'usager. Ce numéro de téléphone doit être au format international. Par exemple +33400000000. | 
+| passenger_mobile_phone    |  Optionnel       |  Le champ mobile_phone est le numéro de téléphone portable de l'usager. Ce numéro de téléphone doit être au format international. Par exemple +33600000000. | 
+| passenger_home_phone      |  Optionnel       |  Le champ home_phone est le numéro de téléphone du domicile de l'usager. Ce numéro de téléphone doit être au format international. Par exemple +33400000000. | 
 | passenger_address_1       |  Optionnel       |  Le champ adress_1 est l'adresse de l'usager | 
 | passenger_address_2       |  Optionnel       |  Le champ adress_2 est un complément de l'adresse de l'usager | 
 | passenger_address_3       |  Optionnel       |  Le champ adress_3 est un complément de l'adresse de l'usager | 
