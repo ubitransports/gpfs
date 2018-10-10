@@ -6,6 +6,10 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 05 Octobre 2018
+
+* Ajout d'un identifiant unique pour le responsable légal dans le fichier [passenger_tutors.txt](passenger_tutors.txt.html)
+
 ## 29 Juin 2017  
 
 * Ajout des réservations liées aux usagers dans le fichier [bookings.txt](bookings.txt.html)

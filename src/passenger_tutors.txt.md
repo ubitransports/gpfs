@@ -8,8 +8,9 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 
 ## Description des colonnes
 
-| Nom du champ      |  Obligatoire    |  Description |
+| Nom du champ          |  Obligatoire    |  Description |
 |-----------------------|:-----------:|----------|
+| tutor_id              |  **Obligatoire**   | Le champ tutor_id est un identifiant unique du responsable légal. |
 | passenger_id          |  **Obligatoire**   | Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal. |
 | tutor_firstname       |  **Obligatoire**   | Le champ firstname est le prénom du responsable légal. |
 | tutor_lastname        |  **Obligatoire**   | Le champ lastname est le nom du responsable légal. |
@@ -27,8 +28,8 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 | tutor_address_city    |  Optionnel   | Le champ address_city est la ville d'habitation du responsable légal |
 | tutor_address_country |  Optionnel   | Le champ address_country est le pays d'habitation du responsable légal |
 
-## Exemple : 
+## Exemple :
 ```
-passenger_id,tutor_firstname,tutor_lastname,tutor_gender_title,tutor_parent_link,tutor_email,tutor_mobile_phone,tutor_home_phone,tutor_work_phone,tutor_dateofbirth,tutor_address_1,tutor_address_2,tutor_address_3,tutor_address_zipcode,tutor_address_city,tutor_address_country
-P1,Paul,Doe,M,2,paul.doe@gmail.com,+33600000000,,,19600601,36 rue du pont,,,71000,Mâcon,France
+tutor_id,passenger_id,tutor_firstname,tutor_lastname,tutor_gender_title,tutor_parent_link,tutor_email,tutor_mobile_phone,tutor_home_phone,tutor_work_phone,tutor_dateofbirth,tutor_address_1,tutor_address_2,tutor_address_3,tutor_address_zipcode,tutor_address_city,tutor_address_country
+T1,P1,Paul,Doe,M,2,paul.doe@gmail.com,+33600000000,,,19600601,36 rue du pont,,,71000,Mâcon,France
 ```
