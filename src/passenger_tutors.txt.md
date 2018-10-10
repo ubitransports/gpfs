@@ -8,9 +8,9 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 
 ## Description des colonnes
 
-| Nom du champ      |  Obligatoire    |  Description |
+| Nom du champ          |  Obligatoire    |  Description |
 |-----------------------|:-----------:|----------|
-| tutor_id          |  **Obligatoire**   | Le champ tutor_id est un identifiant unique du responsable légal. |
+| tutor_id              |  **Obligatoire**   | Le champ tutor_id est un identifiant unique du responsable légal. |
 | passenger_id          |  **Obligatoire**   | Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal. |
 | tutor_firstname       |  **Obligatoire**   | Le champ firstname est le prénom du responsable légal. |
 | tutor_lastname        |  **Obligatoire**   | Le champ lastname est le nom du responsable légal. |
