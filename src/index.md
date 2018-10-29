@@ -34,9 +34,11 @@ Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier co
 Les prérequis suivants s'appliquent au format et contenu des fichiers :
 
 * Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.
+* Les noms de fichiers sont sensible à la casse.
 * La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non utilisé, la colonne peut être omise.
 * Tous les noms de champs sont sensibles à la casse.
 * Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.
 * Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.
 * Les fichiers doivent être encodés en UTF-8.
 * Les fichiers doivent être contenus dans un dossier compressé au format ZIP.
+* L'ordre dans lignes dans chaque fichier n'a pas d'importance

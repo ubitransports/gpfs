@@ -6,6 +6,10 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 29 Octobre 2018
+
+* Ajout d'explications concernant les restictions d'usage de ticket définies dans le fichier [passenger_tickets.txt](passenger_tickets.txt.html)
+
 ## 05 Octobre 2018
 
 * Ajout d'un identifiant unique pour le responsable légal dans le fichier [passenger_tutors.txt](passenger_tutors.txt.html)
