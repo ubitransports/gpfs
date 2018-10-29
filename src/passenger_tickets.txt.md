@@ -37,14 +37,14 @@ Il est possible de restreindre les tickets sur un ou plusieurs critères :
 - `time` Une plage horaire (ex: Entre 12h et 14h)
 - `calendar` Un calendrier (ex: En période de vacance scolaire)
 
-Les restrictions d'utilisation de tickets sont gérer au format JSON.
+Les restrictions d'utilisation de tickets sont gérées au format JSON.
 
 Une **restriction** est un tableau JSON d'une ou plusieurs règles : `[REGLE_A, REGLE_B]`
 L'utilisation du ticket est autorisé si au moins une des règles est valide.
 
 Une **règle** est un objet JSON d'un ou plusieurs critères cités ci-dessus : `{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}`
 La condition est également un objet du type `{"is":[REFERENCE_A, REFERENCE_B]}` ou `{"isnot":[REFERENCE_A, REFERENCE_B]}`.
-Les références correspondents gaux références Réf. Ext (colonne trip_id du GTFS par exemple) et non au nom ou nom court de l'objet.
+Les références correspondents aux références `Réf. Ext` visible sur 2Cloud (colonne trip_id du GTFS par exemple) et non au nom ou nom court de l'objet.
 
 ### Exemples de restrictions
 
