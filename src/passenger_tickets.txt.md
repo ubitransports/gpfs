@@ -44,7 +44,6 @@ L'utilisation du ticket est autorisé si au moins une des règles est valide.
 
 Une **règle** est un objet JSON d'un ou plusieurs critères cités ci-dessus : `{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}`
 La condition est également un objet du type `{"is":[REFERENCE_A, REFERENCE_B]}` ou `{"isnot":[REFERENCE_A, REFERENCE_B]}`.
-Les références correspondents aux références `Réf. Ext` visible sur 2Cloud (colonne trip_id du GTFS par exemple) et non au nom ou nom court de l'objet.
 
 ### Exemples de restrictions
 
