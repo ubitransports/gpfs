@@ -175,7 +175,39 @@
 </table>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
-T0000001,P1,TU1,20160101000000,20160131235959,{"line":[1,2,3]}</code></pre>
+T0000001,P1,TU1,20160101000000,20160131235959,[{"line":{"is":["LA","LB","LC"]}}]</code></pre>
+<h2 id="gestion-des-restrictions">Gestion des restrictions</h2>
+<p>Il est possible de restreindre les tickets sur un ou plusieurs critères :</p>
+<ul>
+<li><code>network</code> Un réseau de transport (ex: Sur le réseau Scolaire)</li>
+<li><code>line</code> Une ligne (ex: Sur la ligne A ou B)</li>
+<li><code>trip</code> Une course (ex: Sur la course 10703)</li>
+<li><code>stoparea</code> Un arrêt commercial (ex: A l'arrêt &quot;Gare SNCF&quot;)</li>
+<li><code>stoppoint</code> Un arrêt physique (ex: A l'arrêt &quot;Gare SNCF&quot; sens Aller)</li>
+<li><code>zone</code> Une zone tarifaire (ex: Dans la zone tarif &quot;A&quot;)</li>
+<li><code>weekday</code> Un jour de semaine (ex: Du lundi a vendredi)</li>
+<li><code>time</code> Une plage horaire (ex: Entre 12h et 14h)</li>
+<li><code>calendar</code> Un calendrier (ex: En période de vacance scolaire)</li>
+</ul>
+<p>Les restrictions d'utilisation de tickets sont gérer au format JSON.</p>
+<p>Une <strong>restriction</strong> est un tableau JSON d'une ou plusieurs règles : <code>[REGLE_A, REGLE_B]</code>
+L'utilisation du ticket est autorisé si au moins une des règles est valide.</p>
+<p>Une <strong>règle</strong> est un objet JSON d'un ou plusieurs critères cités ci-dessus : <code>{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}</code>
+La condition est également un objet du type <code>{"is":[REFERENCE_A, REFERENCE_B]}</code> ou <code>{"isnot":[REFERENCE_A, REFERENCE_B]}</code>.
+Les références correspondents gaux références Réf. Ext (colonne trip_id du GTFS par exemple) et non au nom ou nom court de l'objet.</p>
+<h3 id="exemples-de-restrictions">Exemples de restrictions</h3>
+<p>Utilisable sur la ligne LA ou LB ou LC :</p>
+<pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
+<p>Utilisable uniquement en période de vacance scolaire (ref: CAL_SCOLAIRE)</p>
+<pre><code>[{"calendar":{"is":["CAL_SCOLAIRE"]}}]</code></pre>
+<p>Utilisable sur le réseau scolaire (ref: RESEAU_SCOLAIRE) :</p>
+<pre><code>[{"network":{"is":["RESEAU_SCOLAIRE"]}}]</code></pre>
+<p>Utilisable sur le réseau scolaire la semaine et sur le réseau urbain le weekend</p>
+<pre><code>[{"network":{"is":["RESEAU_SCOLAIRE"]}, "weekday": {"is":["1111100"]}},{"network":{"is":["RESEAU_URBAIN"]}, "weekday": {"is":["0000011"]}}]</code></pre>
+<p>Utilisable sur la ligne LA ou LB ou LC :</p>
+<pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
+<p>Utilisable partout sauf sur ligne TAD:</p>
+<pre><code>[{"line":{"isnot":["TAD"]}}</code></pre>
                     </div>
 
                     <footer>
