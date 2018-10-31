@@ -41,4 +41,4 @@ Les prérequis suivants s'appliquent au format et contenu des fichiers :
 * Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.
 * Les fichiers doivent être encodés en UTF-8.
 * Les fichiers doivent être contenus dans un dossier compressé au format ZIP.
-* L'ordre dans lignes dans chaque fichier n'a pas d'importance
+* L'ordre des lignes dans chaque fichier n'a pas d'importance
