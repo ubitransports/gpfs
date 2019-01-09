@@ -175,7 +175,7 @@
 </table>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
-T0000001,P1,TU1,20160101000000,20160131235959,[{"line":{"is":["LA","LB","LC"]}}]</code></pre>
+T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></pre>
 <h2 id="gestion-des-restrictions">Gestion des restrictions</h2>
 <p>Il est possible de restreindre les tickets sur un ou plusieurs critères :</p>
 <ul>
@@ -190,11 +190,15 @@ T0000001,P1,TU1,20160101000000,20160131235959,[{"line":{"is":["LA","LB","LC"]}}]
 <li><code>calendar</code> Un calendrier (ex: En période de vacance scolaire)</li>
 </ul>
 <p>Les restrictions d'utilisation de tickets sont gérées au format JSON.</p>
+<p>/!\ Attention, ce JSON doit être échappé pour être stocké sous format texte dans le CSV.
+C'est à dire entouré de double quotes (<code>"</code>) et les doubles quotes du JSON doivent êtres doublées (<code>""</code>).
+Exemple : <code>[{"line":{"is":["LA","LB","LC"]}}]</code> devient <code>"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></p>
 <p>Une <strong>restriction</strong> est un tableau JSON d'une ou plusieurs règles : <code>[REGLE_A, REGLE_B]</code>
 L'utilisation du ticket est autorisé si au moins une des règles est valide.</p>
 <p>Une <strong>règle</strong> est un objet JSON d'un ou plusieurs critères cités ci-dessus : <code>{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}</code>
 La condition est également un objet du type <code>{"is":[REFERENCE_A, REFERENCE_B]}</code> ou <code>{"isnot":[REFERENCE_A, REFERENCE_B]}</code>.</p>
-<h3 id="exemples-de-restrictions">Exemples de restrictions</h3>
+<h3 id="exemples-de-json-de-restrictions">Exemples de JSON de restrictions</h3>
+<p>Note : Pour une raison de lisibilité ces JSON ne sont pas échappé (voir ci-dessus)</p>
 <p>Utilisable sur la ligne LA ou LB ou LC :</p>
 <pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
 <p>Utilisable uniquement en période de vacance scolaire (ref: CAL_SCOLAIRE)</p>
