@@ -20,7 +20,7 @@ Ce fichier définit les titres de transport attribués aux usagers définis dans
 ## Exemple :
 ```
 ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
-T0000001,P1,TU1,20160101000000,20160131235959,[{"line":{"is":["LA","LB","LC"]}}]
+T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"
 ```
 
 ## Gestion des restrictions
@@ -39,13 +39,19 @@ Il est possible de restreindre les tickets sur un ou plusieurs critères :
 
 Les restrictions d'utilisation de tickets sont gérées au format JSON.
 
+/!\ Attention, ce JSON doit être échappé pour être stocké sous format texte dans le CSV.
+C'est à dire entouré de double quotes (`"`) et les doubles quotes du JSON doivent êtres doublées (`""`).
+Exemple : `[{"line":{"is":["LA","LB","LC"]}}]` devient `"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"`
+
 Une **restriction** est un tableau JSON d'une ou plusieurs règles : `[REGLE_A, REGLE_B]`
 L'utilisation du ticket est autorisé si au moins une des règles est valide.
 
 Une **règle** est un objet JSON d'un ou plusieurs critères cités ci-dessus : `{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}`
 La condition est également un objet du type `{"is":[REFERENCE_A, REFERENCE_B]}` ou `{"isnot":[REFERENCE_A, REFERENCE_B]}`.
 
-### Exemples de restrictions
+### Exemples de JSON de restrictions
+
+Note : Pour une raison de lisibilité ces JSON ne sont pas échappé (voir ci-dessus)
 
 Utilisable sur la ligne LA ou LB ou LC :
 ```
