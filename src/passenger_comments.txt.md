@@ -10,10 +10,20 @@ Ce fichier contient les commentaires additionnels associés aux usagers définis
 
 | Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
-| passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| comment         | **Obligatoire** | Le champ comments est un commentaire associé à l'usager.  |
+| passenger_id    | **Obligatoire** | Identifiant de l'usager référencé. |
+| comment         | **Obligatoire** | Texte du commentaire. |
 
-##Exemple : 
+### Format des commentaires 
+
+Afin de respecter le format CSV, il faut échapper les éventuelles virgules en mettant l'ensemble du commentaire entre double quotes (`"`).
+
+Ex: 
+```
+passenger_id_comment
+1,"Abonnement en cours de règlement, carte délivrée"
+```
+
+## Exemple : 
 
 ```
 passenger_id,comment

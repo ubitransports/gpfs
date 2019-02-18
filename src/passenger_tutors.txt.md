@@ -8,25 +8,25 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 
 ## Description des colonnes
 
-| Nom du champ          |  Obligatoire    |  Description |
-|-----------------------|:-----------:|----------|
-| tutor_id              |  **Obligatoire**   | Le champ tutor_id est un identifiant unique du responsable légal. |
-| passenger_id          |  **Obligatoire**   | Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal. |
-| tutor_firstname       |  **Obligatoire**   | Le champ firstname est le prénom du responsable légal. |
-| tutor_lastname        |  **Obligatoire**   | Le champ lastname est le nom du responsable légal. |
-| tutor_gender_title    |  Optionnel   | Le champ tutor_gender_title contient le titre du responsable légal (Exemple : Mme, Mlle, M.)|
-| tutor_parent_link     |  Optionnel   | Le champ parent_link est le lien de parenté entre l'usager et le responsable légal. Les valeurs valides pour ce champ sont  :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.|
-| tutor_email           |  Optionnel   | Le champ email est l'adresse mail de contact du responsable légal.|
-| tutor_mobile_phone    |  Optionnel   | Le champ email est le numéro de téléphone portable du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33600000000.|
-| tutor_home_phone      |  Optionnel   | Le champ email est le numéro de téléphone du domicile du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.|
-| tutor_work_phone      |  Optionnel   | Le champ email est le numéro de téléphone du travail du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.|
-| tutor_dateofbirth     |  Optionnel   | Le champ dateofbirth est la date de naissance du responsable légal au format YYYYMMDD|
-| tutor_address_1       |  Optionnel   | Le champ tutor_adress_1 est l'adresse du responsable légal|
-| tutor_address_2       |  Optionnel   | Le champ tutor_adress_2 est un complément de l'adresse du responsable légal|
-| tutor_address_3       |  Optionnel   | Le champ tutor_adress_3 est un complément de l'adresse du responsable légal |
-| tutor_address_zipcode |  Optionnel   | Le champ tutor_adress_zipcode est le code postal du responsable légal |
-| tutor_address_city    |  Optionnel   | Le champ address_city est la ville d'habitation du responsable légal |
-| tutor_address_country |  Optionnel   | Le champ address_country est le pays d'habitation du responsable légal |
+| Nom du champ             |  Obligatoire     |  Longueur max |  Description |
+|---------------------------|:----------------:|------|--------------|
+| tutor_id              |  **Obligatoire**   |   -  | Identifiant unique du responsable légal. |
+| passenger_id          |  **Obligatoire**   |   -  | Identifiant de l'usager associé à ce responsable légal. |
+| tutor_firstname       |  **Obligatoire**   |  **255** | Prénom du responsable légal. |
+| tutor_lastname        |  **Obligatoire**   |  **255** | Nom du responsable légal. |
+| tutor_gender_title    |  Optionnel   |  **30**  | Titre du responsable légal ; Champ libre (Exemple : Mme, Mlle, M.).|
+| tutor_parent_link     |  Optionnel   |   -  | Lien de parenté entre l'usager et le responsable légal. Valeurs acceptées :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.|
+| tutor_email           |  Optionnel   |  **255** | Adresse e-mail du responsable légal.|
+| tutor_mobile_phone    |  Optionnel   |  **255** | Numéro de téléphone portable du responsable légal. Doit être au format international (exemple : +33600000000).|
+| tutor_home_phone      |  Optionnel   |  **255** | Numéro de téléphone du domicile du responsable légal. Doit être au format international (exemple : +33400000000).|
+| tutor_work_phone      |  Optionnel   |  **255** | Numéro de téléphone du travail du responsable légal. Doit être au format international (exemple : +33400000000).|
+| tutor_dateofbirth     |  Optionnel   |   -  | Date de naissance du responsable légal au format YYYYMMDD. |
+| tutor_address_1       |  Optionnel   |   -  | Adresse du responsable légal. |
+| tutor_address_2       |  Optionnel   |   -  | Complément d'adresse du responsable légal. |
+| tutor_address_3       |  Optionnel   |   -  | Complément d'adresse du responsable légal. |
+| tutor_address_zipcode |  Optionnel   |   -  | Code postal du responsable légal. |
+| tutor_address_city    |  Optionnel   |   -  | Ville d'habitation du responsable légal. |
+| tutor_address_country |  Optionnel   |   -  | Pays d'habitation du responsable légal. |
 
 ## Exemple :
 ```

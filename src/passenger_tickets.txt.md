@@ -4,18 +4,18 @@ currentMenu: passenger_tickets.txt
 
 # passenger_tickets.txt
 
-Ce fichier définit les titres de transport attribués aux usagers définis dans le fichier [passengers.txt](passengers.txt.html). La notion comptable peut être saisie dans un fichier d'extension [passenger_tickets.ext.txt](passenger_tickets.ext.txt.html).
+Ce fichier définit les titres de transport attribués aux usagers déclarés dans le fichier [passengers.txt](passengers.txt.html). La notion comptable peut être saisie dans un fichier d'extension [passenger_tickets.ext.txt](passenger_tickets.ext.txt.html).
 
 ## Description des colonnes
 
 | Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:------------:|----------|
-| ticket_id       | **Obligatoire** | Le champ ticket_id est un identifiant unique qui identifie le titre de transport. |
-| passenger_id    | **Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| fare_id         |  Optionnel    | Le champ fare_id est un identifiant unique qui identifie un tarif.  |
-| ticket_start_on |  Optionnel    | Le champ ticket_start_on est la date début de validité du titre au format YYYYMMDDHHMMSS.  |
-| ticket_end_on   |  Optionnel    | Le champ ticket_end_on est la date fin de validité du titre au format YYYYMMDDHHMMSS.  |
-| restrictions    |  Optionnel    | Le champ restrictions permet de définir les restrictions dans l'espace et le temps au format JSON  |
+| ticket_id       | **Obligatoire** | Identifiant unique du titre de transport. |
+| passenger_id    | **Obligatoire** | Identifiant de l'usager référencé. |
+| fare_id         |  Optionnel    | Identifiant du tarif lié à ce titre de transport.  |
+| ticket_start_on |  Optionnel    | Date de début de validité du titre au format YYYYMMDDHHMMSS.  |
+| ticket_end_on   |  Optionnel    | Date de fin de validité du titre au format YYYYMMDDHHMMSS.  |
+| restrictions    |  Optionnel    | Restrictions d'usage du titre dans l'espace et le temps, au format JSON  |
 
 ## Exemple :
 ```
@@ -23,13 +23,13 @@ ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
 T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"
 ```
 
-## Gestion des restrictions
+## Fonctionnement des restrictions
 
 Il est possible de restreindre les tickets sur un ou plusieurs critères :
 
 - `network` Un réseau de transport (ex: Sur le réseau Scolaire)
 - `line` Une ligne (ex: Sur la ligne A ou B)
-- `trip` Une course (ex: Sur la course 10703)
+- `trip` Une course (ex: Sur la course 107-03A9)
 - `stoparea` Un arrêt commercial (ex: A l'arrêt "Gare SNCF")
 - `stoppoint` Un arrêt physique (ex: A l'arrêt "Gare SNCF" sens Aller)
 - `zone` Une zone tarifaire (ex: Dans la zone tarif "A")
@@ -39,19 +39,23 @@ Il est possible de restreindre les tickets sur un ou plusieurs critères :
 
 Les restrictions d'utilisation de tickets sont gérées au format JSON.
 
-/!\ Attention, ce JSON doit être échappé pour être stocké sous format texte dans le CSV.
-C'est à dire entouré de double quotes (`"`) et les doubles quotes du JSON doivent êtres doublées (`""`).
-Exemple : `[{"line":{"is":["LA","LB","LC"]}}]` devient `"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"`
-
 Une **restriction** est un tableau JSON d'une ou plusieurs règles : `[REGLE_A, REGLE_B]`
 L'utilisation du ticket est autorisé si au moins une des règles est valide.
 
 Une **règle** est un objet JSON d'un ou plusieurs critères cités ci-dessus : `{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}`
 La condition est également un objet du type `{"is":[REFERENCE_A, REFERENCE_B]}` ou `{"isnot":[REFERENCE_A, REFERENCE_B]}`.
 
+### Format JSON et caractères à échapper
+
+Le JSON des restrictions doit être échappé pour être stocké et interprété correctement dans le CSV.
+
+Il doit être entouré de double quotes (`"`) ; les doubles quotes du JSON doivent donc être doublées (`""`).
+
+Exemple : `[{"line":{"is":["LA","LB","LC"]}}]` devient `"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"`
+
 ### Exemples de JSON de restrictions
 
-Note : Pour une raison de lisibilité ces JSON ne sont pas échappé (voir ci-dessus)
+Note : Pour une raison de lisibilité ces exemples au format JSON ne sont pas échappés (voir ci-dessus)
 
 Utilisable sur la ligne LA ou LB ou LC :
 ```
