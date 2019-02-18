@@ -13,9 +13,9 @@ Ce fichier définit les titres de transport attribués aux usagers déclarés da
 | ticket_id       | **Obligatoire** | Identifiant unique du titre de transport. |
 | passenger_id    | **Obligatoire** | Identifiant de l'usager référencé. |
 | fare_id         |  Optionnel    | Identifiant du tarif lié à ce titre de transport.  |
-| ticket_start_on |  Optionnel    | Date de début de validité du titre au format YYYYMMDDHHMMSS.  |
-| ticket_end_on   |  Optionnel    | Date de fin de validité du titre au format YYYYMMDDHHMMSS.  |
-| restrictions    |  Optionnel    | Restrictions d'usage du titre dans l'espace et le temps, au format JSON  |
+| ticket_start_on |  Optionnel    | Date de début de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates).  |
+| ticket_end_on   |  Optionnel    | Date de fin de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates).  |
+| restrictions    |  Optionnel    | Restrictions d'usage du titre dans l'espace et le temps, au [format JSON](types.html#JSON)  |
 
 ## Exemple :
 ```
@@ -44,14 +44,6 @@ L'utilisation du ticket est autorisé si au moins une des règles est valide.
 
 Une **règle** est un objet JSON d'un ou plusieurs critères cités ci-dessus : `{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}`
 La condition est également un objet du type `{"is":[REFERENCE_A, REFERENCE_B]}` ou `{"isnot":[REFERENCE_A, REFERENCE_B]}`.
-
-### Format JSON et caractères à échapper
-
-Le JSON des restrictions doit être échappé pour être stocké et interprété correctement dans le CSV.
-
-Il doit être entouré de double quotes (`"`) ; les doubles quotes du JSON doivent donc être doublées (`""`).
-
-Exemple : `[{"line":{"is":["LA","LB","LC"]}}]` devient `"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"`
 
 ### Exemples de JSON de restrictions
 

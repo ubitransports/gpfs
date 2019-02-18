@@ -19,7 +19,7 @@ Afin de respecter le format CSV, il faut échapper les éventuelles virgules en 
 
 Ex: 
 ```
-passenger_id_comment
+passenger_id,comment
 1,"Abonnement en cours de règlement, carte délivrée"
 ```
 

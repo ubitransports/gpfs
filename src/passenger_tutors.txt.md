@@ -17,10 +17,10 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 | tutor_gender_title    |  Optionnel   |  **30**  | Titre du responsable légal ; Champ libre (Exemple : Mme, Mlle, M.).|
 | tutor_parent_link     |  Optionnel   |   -  | Lien de parenté entre l'usager et le responsable légal. Valeurs acceptées :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.|
 | tutor_email           |  Optionnel   |  **255** | Adresse e-mail du responsable légal.|
-| tutor_mobile_phone    |  Optionnel   |  **255** | Numéro de téléphone portable du responsable légal. Doit être au format international (exemple : +33600000000).|
-| tutor_home_phone      |  Optionnel   |  **255** | Numéro de téléphone du domicile du responsable légal. Doit être au format international (exemple : +33400000000).|
-| tutor_work_phone      |  Optionnel   |  **255** | Numéro de téléphone du travail du responsable légal. Doit être au format international (exemple : +33400000000).|
-| tutor_dateofbirth     |  Optionnel   |   -  | Date de naissance du responsable légal au format YYYYMMDD. |
+| tutor_mobile_phone    |  Optionnel   |  **255** | Numéro de téléphone portable du responsable légal, [au format international](types.html).|
+| tutor_home_phone      |  Optionnel   |  **255** | Numéro de téléphone du domicile du responsable légal, [au format international](types.html).|
+| tutor_work_phone      |  Optionnel   |  **255** | Numéro de téléphone du travail du responsable légal, [au format international](types.html).|
+| tutor_dateofbirth     |  Optionnel   |   -  | Date de naissance du responsable légal au format [YYYYMMDD](types.html#Dates). |
 | tutor_address_1       |  Optionnel   |   -  | Adresse du responsable légal. |
 | tutor_address_2       |  Optionnel   |   -  | Complément d'adresse du responsable légal. |
 | tutor_address_3       |  Optionnel   |   -  | Complément d'adresse du responsable légal. |

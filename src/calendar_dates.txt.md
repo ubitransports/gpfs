@@ -12,7 +12,7 @@ Ce fichier contient les informations concernant les dates à inclure ou exclure 
 |---------------------------|:---------------:|--------------|
 | date_id                   | **Obligatoire** |  Identifiant unique de la date à inclure ou exclure d'un calendrier.|
 | calendar_id               | **Obligatoire** |  Identifiant du calendrier concerné.|
-| date                      | **Obligatoire** |  Date à inclure ou exclure, au format YYYYMMDD. |
+| date                      | **Obligatoire** |  Date à inclure ou exclure, au format [YYYYMMDD](types.html#Dates). |
 | exception_type            | **Obligatoire** |  Indique l'inclusion ou l'exclusion. Valeurs acceptées  :  1 = inclus ; 2 = exclu.|
 
 

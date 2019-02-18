@@ -11,8 +11,8 @@ Ce fichier contient les informations concernant les calendriers de fonctionnemen
 | Nom du champ              |  Obligatoire    |  Description |
 |---------------------------|:---------------:|--------------|
 | calendar_id               | **Obligatoire** | Identifiant unique du calendrier.|
-| period_start              | **Obligatoire** | Date de début de validité de la réservation au format YYYYMMDD. |
-| period_end                | **Obligatoire** | Date de fin de validité de la réservation au format YYYYMMDD. |
+| period_start              | **Obligatoire** | Date de début de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
+| period_end                | **Obligatoire** | Date de fin de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | days                      | optionnel       | Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous. |  
 
 ### Champ `days` et format binaire

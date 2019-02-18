@@ -12,8 +12,8 @@ Ce fichier contient les associations entre les profils ([profiles.txt](profiles.
 |-----------------|:-----------:|----------|
 | passenger_id    |**Obligatoire** | Identifiant unique de l'usager. |
 | profil_id       |**Obligatoire** | Nom du profil associé à l'usager. |
-| profil_start_on |  Optionnel   | Date de prise d'effet au format YYYYMMDD. |
-| profil_end_on   |  Optionnel   | Date d'expiration au format YYYYMMDD. |
+| profil_start_on |  Optionnel   | Date de prise d'effet au format [YYYYMMDD](types.html#Dates). |
+| profil_end_on   |  Optionnel   | Date d'expiration au format [YYYYMMDD](types.html#Dates). |
 
 ## Exemple : 
 

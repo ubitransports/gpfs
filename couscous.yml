@@ -18,6 +18,9 @@ menu:
         index:
             text: Référence
             relativeUrl: index.html
+        types:
+            text: Types
+            relativeUrl: types.html
         revision:
             text: Changelog
             relativeUrl: revision.html

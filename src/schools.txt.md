@@ -20,8 +20,8 @@ Ce fichier contient les informations concernant les établissements scolaires.
 | school_address_city    | Optionnel     |  Ville de l'établissement scolaire. |
 | school_address_country | Optionnel     |  Pays de l'établissement scolaire. |
 | school_email           | Optionnel     |  Adresse e-mail de l'établissement scolaire. |
-| school_lat             | Optionnel     |  Latitude de l'établissement. Doit être renseignée avec le système géodésique WGS 84 (https://fr.wikipedia.org/wiki/WGS_84). |
-| school_lon             | Optionnel     |  Longitude de l'établissement. Doit être renseignée avec le système géodésique WGS 84 (https://fr.wikipedia.org/wiki/WGS_84). |
+| school_lat             | Optionnel     |  Latitude de l'établissement. Doit être renseignée avec le [système géodésique WGS 84](https://fr.wikipedia.org/wiki/WGS_84). |
+| school_lon             | Optionnel     |  Longitude de l'établissement. Doit être renseignée avec le [système géodésique WGS 84](https://fr.wikipedia.org/wiki/WGS_84). |
 | school_open_on         | Optionnel     |  Jours d'ouverture hebdomadaire de l'établissement au format binaire sur 7 caractères. Voir exemples ci-dessous. |
 
 ### Champ `school_open_on` et format binaire
@@ -32,7 +32,7 @@ Par exemple :
 * ouverture du lundi au vendredi : `1111100`
 * ouverture lundi-mardi-jeudi-vendredi : `1101100`.
 
-Par défaut tous les jours sont actifs (`1111111`)
+Par défaut tous les jours sont inactifs (`0000000`)
 
 ## Exemple
 ```

@@ -14,13 +14,11 @@ Ce fichier contient les informations sur les cartes des usagers.
 | passenger_id           | **Obligatoire** |   -  |  Identifie l'usager qui détient cette carte. Ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
 | uid                    | **Obligatoire** |  **255** |  Identifiant physique de la carte. Il doit être unique. |
 | uid_format             | optionnel       |   -  |  Indique si la valeur du champ uid est au format hexadécimal ou décimal|
-| delivery_date          | optionnel       |   -  |  Date de remise de la carte au format YYYYMMDD.|
-| validity_end           | optionnel       |   -  |  Date prévisionnelle de fin de validité de la carte au format YYYYMMDD.|
-| disabled_date          | optionnel       |   -  |  Date effective de désactivation de la carte au format YYYYMMDD.|
+| delivery_date          | optionnel       |   -  |  Date de remise de la carte au format [YYYYMMDD](types.html#Dates).|
+| validity_end           | optionnel       |   -  |  Date prévisionnelle de fin de validité de la carte au format [YYYYMMDD](types.html#Dates).|
+| disabled_date          | optionnel       |   -  |  Date effective de désactivation de la carte au format [YYYYMMDD](types.html#Dates).|
 | disabled_cause         | optionnel       |   -  |  Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas. |
 
-### Format des dates :
-* **YYYYMMDD**           : Année sur 4 chiffres, mois sur 2 chiffres et jour sur 2 chiffres.
 
 ### Valeurs du champ "uid_format" :
 
