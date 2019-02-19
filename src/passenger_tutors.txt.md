@@ -14,7 +14,7 @@ Ce fichier contient les informations concernant les responsables légaux des usa
 | passenger_id          |  **Obligatoire**   |   -  | Identifiant de l'usager associé à ce responsable légal. |
 | tutor_firstname       |  **Obligatoire**   |  **255** | Prénom du responsable légal. |
 | tutor_lastname        |  **Obligatoire**   |  **255** | Nom du responsable légal. |
-| tutor_gender_title    |  Optionnel   |  **30**  | Titre du responsable légal ; Champ libre (Exemple : Mme, Mlle, M.).|
+| tutor_gender_title    |  Optionnel   |  **30**  | Titre du responsable légal ; Il peut s'agir de n'importe quel texte (exemple : Mme, Mlle, M...).|
 | tutor_parent_link     |  Optionnel   |   -  | Lien de parenté entre l'usager et le responsable légal. Valeurs acceptées :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.|
 | tutor_email           |  Optionnel   |  **255** | Adresse e-mail du responsable légal.|
 | tutor_mobile_phone    |  Optionnel   |  **255** | Numéro de téléphone portable du responsable légal, [au format international](types.html).|

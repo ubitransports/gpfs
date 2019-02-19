@@ -16,7 +16,7 @@ Ce fichier contient les informations concernant les usagers pouvant utiliser le 
 | passenger_file_number     |  **Obligatoire** |  **255** |  Numéro de dossier de l'usager. |
 | passenger_firstname       |  **Obligatoire** |  **255** |  Prénom de l'usager |
 | passenger_lastname        |  **Obligatoire** |  **255** |  Nom de l'usager |
-| passenger_gender_title    |  Optionnel       |  **30**  |  Civilité de l'usager. Il peut contenir n'importe quel texte. |
+| passenger_gender_title    |  Optionnel       |  **30**  |  Civilité de l'usager. Il peut s'agir de n'importe quel texte (exemple : Mme, Mlle, M...). |
 | passenger_dateofbirth     |  Optionnel       |   -  |  Date de naissance de l'usager au format [YYYYMMDD](types.html#Dates) |
 | passenger_gender          |  Optionnel       |   -  |  Sexe de l'usager.  Valeurs acceptées :  0 = Non communiqué, 1 = homme, 2 = femme |
 | passenger_email           |  Optionnel       |  **255** |  Adresse email de contact de l'usager |
