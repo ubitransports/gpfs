@@ -37,7 +37,7 @@ Il est possible de restreindre les tickets sur un ou plusieurs critères :
 - `time` Une plage horaire (ex: Entre 12h et 14h)
 - `calendar` Un calendrier (ex: En période de vacance scolaire)
 
-Les restrictions d'utilisation de tickets sont gérées au format JSON.
+Les restrictions d'utilisation de tickets sont gérées au [format JSON](types.html#JSON).
 
 Une **restriction** est un tableau JSON d'une ou plusieurs règles : `[REGLE_A, REGLE_B]`
 L'utilisation du ticket est autorisé si au moins une des règles est valide.

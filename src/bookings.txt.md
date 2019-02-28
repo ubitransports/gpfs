@@ -22,7 +22,7 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 
 ### Période de validité
 
-La période de validité d'une réservation peut être définie de deux manières :
+La période de validité d'une réservation doit être définie de l'une des deux manières suivantes :
 
 * Via les champs start_date, end_date et days
 * Via le champ `calendar_id` qui sera en lien avec le fichier [calendars.txt](calendars.txt).

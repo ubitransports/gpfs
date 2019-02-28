@@ -28,6 +28,8 @@ ANONYMOUS,Anonymous,,,,,1
 
 ## Types de profil
 
+__Le profil doit être obligatoirement typé de l'une des trois manières suivantes.__
+
 ### Profil basé sur une période
 
 En plus des champs obligatoires, les champs `profil_start_on` et/ou `profil_end_on` peuvent être définis. Voir les exemples ci-dessous :  
