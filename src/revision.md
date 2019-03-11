@@ -6,6 +6,11 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 11 Mars 2019
+
+* Ajout d'explications sur les types et les formats des différents champs. 
+* Ajout d'une [page](types.html) dédiée aux types de données.
+
 ## 29 Octobre 2018
 
 * Ajout d'explications concernant les restictions d'usage de ticket définies dans le fichier [passenger_tickets.txt](passenger_tickets.txt.html)
