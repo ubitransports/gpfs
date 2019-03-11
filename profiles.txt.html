@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -154,12 +160,12 @@
 <tr>
 <td>profil_start_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ start_on est la date de prise d'effet au format YYYYMMDD.</td>
+<td>Le champ start_on est la date de prise d'effet au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>profil_end_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ start_on est la date d'expiration au format YYYYMMDD</td>
+<td>Le champ start_on est la date d'expiration au format <a href="types.html#Dates">YYYYMMDD</a></td>
 </tr>
 <tr>
 <td>profil_age_start</td>
@@ -184,20 +190,21 @@ STUDENT,Student,20160901,20170601,,,
 YOUNG,Young,,,,18,
 ANONYMOUS,Anonymous,,,,,1</code></pre>
 <h2 id="types-de-profil">Types de profil</h2>
+<p><strong>Le profil doit être obligatoirement typé de l'une des trois manières suivantes.</strong></p>
 <h3 id="profil-bas-sur-une-priode">Profil basé sur une période</h3>
-<p>En plus des champs obligatoires, les champs <code>profil_start_on</code> et/ou <code>profil_end_on</code> doivent être définis. Voir les exemples ci-dessous :  </p>
+<p>En plus des champs obligatoires, les champs <code>profil_start_on</code> et/ou <code>profil_end_on</code> peuvent être définis. Voir les exemples ci-dessous :  </p>
 <pre><code>profil_id,profil_name,profil_start_on,profil_end_on
 PROFILE_1,"Toute l'année",20160101,20161231
 PROFILE_2,"A partir du 1er Janvier 2016",20160101,
 PROFILE_3,"Jusqu'au 31 Décembre 2016",,20161231</code></pre>
 <h3 id="profil-bas-sur-lge">Profil basé sur l'âge</h3>
-<p>En plus des champs obligatoires, les champs <code>profil_age_start</code> et/ou <code>profil_age_end</code> doivent être définis. Voir les exemples ci-dessous :  </p>
+<p>En plus des champs obligatoires, les champs <code>profil_age_start</code> et/ou <code>profil_age_end</code> peuvent être définis, sous forme de nombres entiers. Voir les exemples ci-dessous :  </p>
 <pre><code>profil_id,profil_name,profil_age_start,profil_age_end
 PROFILE_1,"De 5 ans à 18 ans",5,18
 PROFILE_2,"Jusqu'a 18 ans",,18
 PROFILE_3,"A partir de 5 ans",5,</code></pre>
 <h3 id="profil-anonyme">Profil anonyme</h3>
-<p>En plus des champs obligatoires, le champ <code>profil_anonymous</code> doit être défini. Voir l'exemple ci-dessous :  </p>
+<p>En plus des champs obligatoires, le champ <code>profil_anonymous</code> peut être renseigné. Voir l'exemple ci-dessous :  </p>
 <pre><code>profil_id,profil_name,profil_anonymous
 PROFILE_1,Anonyme,1</code></pre>
                     </div>

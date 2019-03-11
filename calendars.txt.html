@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -130,7 +136,7 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="calendarstxt">calendars.txt</h1>
-<p>Ce fichier contient les informations concernant les calendriers de fonctionnement</p>
+<p>Ce fichier contient les informations concernant les calendriers de fonctionnement.</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
@@ -144,28 +150,35 @@
 <tr>
 <td>calendar_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ calendar_id est un identifiant unique qui identifie un calendrier.</td>
+<td>Identifiant unique du calendrier.</td>
 </tr>
 <tr>
 <td>period_start</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ period_start définit la date de début de validité de la réservation au format YYYYMMDD.</td>
+<td>Date de début de validité de la réservation au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>period_end</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ period_end définit la date de fin de validité de la réservation au format YYYYMMDD.</td>
+<td>Date de fin de validité de la réservation au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>days</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ days définit les jours de fonctionnement de la réservation au format numérique. Par exemple pour une réservation active que le ou les mercredis : 0010000 ou que les week-ends : 0000011. Par défaut tous les jours sont actifs (1111111)</td>
+<td>Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="champ">Champ <code>days</code> et format binaire</h3>
+<p>Le champ <code>days</code> doit être exprimé sur 7 caractères correspondant aux 7 jours de la semaine et prenant la valeur 0 ou 1.</p>
+<p>Par exemple :</p>
+<ul>
+<li>pour un calendrier concernant seulement le mercredi : <code>0010000</code></li>
+<li>seulement les week-ends : <code>0000011</code>.</li>
+</ul>
+<p>Par défaut tous les jours sont actifs (<code>1111111</code>)</p>
 <h2 id="exemple-">Exemple :</h2>
-<pre><code>calendar_id,period_start,period_end,days
-C1,20170101,20170102,0000001
+<pre><code>C1,20170101,20170102,0000001
 C2,20170101,20170112,1111100</code></pre>
                     </div>
 

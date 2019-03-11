@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -130,7 +136,7 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="passenger_ticketsexttxt">passenger_tickets.ext.txt</h1>
-<p>Ce fichier est un complément au fichier <a href="passenger_tickets.txt.html">passenger_tickets.txt</a> qui rajoute la notion comptable d'un achat de titre.</p>
+<p>Ce fichier est un complément au fichier <a href="passenger_tickets.txt.html">passenger_tickets.txt</a> qui ajoute la notion comptable d'un achat de titre.</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
@@ -144,25 +150,30 @@
 <tr>
 <td>ticket_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ ticket_id est un identifiant unique qui identifie le titre de transport.</td>
+<td>Identifiant du titre de transport référencé.</td>
 </tr>
 <tr>
 <td>price</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ price est est le prix TTC du titre en centimes.</td>
+<td>Prix TTC du titre en centimes.</td>
 </tr>
 <tr>
 <td>amount</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ amount est le montant déjà perçu en centimes.</td>
+<td>Montant déjà perçu en centimes.</td>
 </tr>
 <tr>
 <td>payment_detail</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ payment_detail permet d'ajouter un commentaire au réglement.</td>
+<td>Permet d'ajouter un commentaire au réglement.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="format-du-champ">Format du champ <code>payment_detail</code></h3>
+<p>Afin de respecter le format CSV, il faut échapper les éventuelles virgules en mettant l'ensemble du champ entre double quotes (<code>"</code>).</p>
+<p>Ex: </p>
+<pre><code>ticket_id,price,amount,payment_detail
+T0000001,1000,500,"Paiement de 5€ par chèque, à encaisser en Avril"</code></pre>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>ticket_id,price,amount,payment_detail
 T0000001,1000,500,"Paiement de 5€ par chèque"</code></pre>

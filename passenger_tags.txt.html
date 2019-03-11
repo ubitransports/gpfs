@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -130,13 +136,14 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="passenger_tagstxt">passenger_tags.txt</h1>
-<p>Ce fichier contient les informations concernant les cartes des usagers ou des élèves.</p>
+<p>Ce fichier contient les informations sur les cartes des usagers.</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
 <tr>
 <th>Nom du champ</th>
 <th style="text-align: center;">Obligatoire</th>
+<th>Longueur max</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -144,55 +151,59 @@
 <tr>
 <td>tag_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ tag_id est un identifiant unique de la carte.</td>
+<td>-</td>
+<td>Identifiant unique de la carte.</td>
 </tr>
 <tr>
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id identifie l'usager qui détient cette carte, ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
+<td>-</td>
+<td>Identifie l'usager qui détient cette carte. Ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
 </tr>
 <tr>
 <td>uid</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ uid est l'identifiant physique de la carte, il doit être unique.</td>
+<td><strong>255</strong></td>
+<td>Identifiant physique de la carte. Il doit être unique.</td>
 </tr>
 <tr>
 <td>uid_format</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ uid_format indique si la valeur du champs uid est au format hexadécimal ou décimal</td>
+<td>-</td>
+<td>Indique si la valeur du champ uid est au format hexadécimal ou décimal</td>
 </tr>
 <tr>
 <td>delivery_date</td>
 <td style="text-align: center;">optionnel</td>
-<td>La date de remise de la carte au format YYYYMMDD.</td>
+<td>-</td>
+<td>Date de remise de la carte au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>validity_end</td>
 <td style="text-align: center;">optionnel</td>
-<td>La date prévisionnelle de fin de validité de la carte au format YYYYMMDD.</td>
+<td>-</td>
+<td>Date prévisionnelle de fin de validité de la carte au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>disabled_date</td>
 <td style="text-align: center;">optionnel</td>
-<td>La date effective de désactivation de la carte au format YYYYMMDD.</td>
+<td>-</td>
+<td>Date effective de désactivation de la carte au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>disabled_cause</td>
 <td style="text-align: center;">optionnel</td>
-<td>L'indication sur les raisons de la désactivation. la carte est perdue, volée, cassée...</td>
+<td>-</td>
+<td>Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="format-des-dates-">Format des dates :</h2>
-<ul>
-<li><strong>YYYYMMDD</strong>           : Année sur 4 chiffres, mois sur 2 chiffres et jour sur 2 chiffres.</li>
-</ul>
-<h2 id="valeurs-du-champ-quotuid_formatquot-">Valeurs du champ &quot;uid_format&quot; :</h2>
+<h3 id="valeurs-du-champ-quotuid_formatquot-">Valeurs du champ &quot;uid_format&quot; :</h3>
 <ul>
 <li><strong>HEX</strong> ou Vide : <em>Hexadécimal</em>.</li>
 <li><strong>DEC</strong> : <em>Décimal</em>.</li>
 </ul>
-<h2 id="valeurs-du-champs-quotdisabled_causequot-">Valeurs du champs &quot;disabled_cause&quot; :</h2>
+<h3 id="valeurs-du-champ-quotdisabled_causequot-">Valeurs du champ &quot;disabled_cause&quot; :</h3>
 <ul>
 <li><strong>LOST</strong>           : <em>Carte perdue</em>.</li>
 <li><strong>STOLEN</strong>         : <em>Carte volée</em>.</li>

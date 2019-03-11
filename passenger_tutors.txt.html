@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -137,6 +143,7 @@
 <tr>
 <th>Nom du champ</th>
 <th style="text-align: center;">Obligatoire</th>
+<th>Longueur max</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -144,87 +151,104 @@
 <tr>
 <td>tutor_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ tutor_id est un identifiant unique du responsable légal.</td>
+<td>-</td>
+<td>Identifiant unique du responsable légal.</td>
 </tr>
 <tr>
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id est un identifiant unique de l'usager associé à ce responsable légal.</td>
+<td>-</td>
+<td>Identifiant de l'usager associé à ce responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_firstname</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ firstname est le prénom du responsable légal.</td>
+<td><strong>255</strong></td>
+<td>Prénom du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_lastname</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ lastname est le nom du responsable légal.</td>
+<td><strong>255</strong></td>
+<td>Nom du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_gender_title</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ tutor_gender_title contient le titre du responsable légal (Exemple : Mme, Mlle, M.)</td>
+<td><strong>30</strong></td>
+<td>Titre du responsable légal ; Il peut s'agir de n'importe quel texte (exemple : Mme, Mlle, M...).</td>
 </tr>
 <tr>
 <td>tutor_parent_link</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ parent_link est le lien de parenté entre l'usager et le responsable légal. Les valeurs valides pour ce champ sont  :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.</td>
+<td>-</td>
+<td>Lien de parenté entre l'usager et le responsable légal. Valeurs acceptées :  0 = non communiqué, 1 = mère, 2 = père, 3 = responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_email</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ email est l'adresse mail de contact du responsable légal.</td>
+<td><strong>255</strong></td>
+<td>Adresse e-mail du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_mobile_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ email est le numéro de téléphone portable du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33600000000.</td>
+<td><strong>255</strong></td>
+<td>Numéro de téléphone portable du responsable légal, <a href="types.html">au format international</a>.</td>
 </tr>
 <tr>
 <td>tutor_home_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ email est le numéro de téléphone du domicile du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.</td>
+<td><strong>255</strong></td>
+<td>Numéro de téléphone du domicile du responsable légal, <a href="types.html">au format international</a>.</td>
 </tr>
 <tr>
 <td>tutor_work_phone</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ email est le numéro de téléphone du travail du responsable légal. Ce numéro de téléphone doit être au format international. Par exemple +33400000000.</td>
+<td><strong>255</strong></td>
+<td>Numéro de téléphone du travail du responsable légal, <a href="types.html">au format international</a>.</td>
 </tr>
 <tr>
 <td>tutor_dateofbirth</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ dateofbirth est la date de naissance du responsable légal au format YYYYMMDD</td>
+<td>-</td>
+<td>Date de naissance du responsable légal au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>tutor_address_1</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ tutor_adress_1 est l'adresse du responsable légal</td>
+<td>-</td>
+<td>Adresse du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_address_2</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ tutor_adress_2 est un complément de l'adresse du responsable légal</td>
+<td>-</td>
+<td>Complément d'adresse du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_address_3</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ tutor_adress_3 est un complément de l'adresse du responsable légal</td>
+<td>-</td>
+<td>Complément d'adresse du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_address_zipcode</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ tutor_adress_zipcode est le code postal du responsable légal</td>
+<td>-</td>
+<td>Code postal du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_address_city</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ address_city est la ville d'habitation du responsable légal</td>
+<td>-</td>
+<td>Ville d'habitation du responsable légal.</td>
 </tr>
 <tr>
 <td>tutor_address_country</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ address_country est le pays d'habitation du responsable légal</td>
+<td>-</td>
+<td>Pays d'habitation du responsable légal.</td>
 </tr>
 </tbody>
 </table>

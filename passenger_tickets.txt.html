@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -130,7 +136,7 @@
                 <div class="rst-content">
                     <div role="main" class="document">
                         <h1 id="passenger_ticketstxt">passenger_tickets.txt</h1>
-<p>Ce fichier définit les titres de transport attribués aux usagers définis dans le fichier <a href="passengers.txt.html">passengers.txt</a>. La notion comptable peut être saisie dans un fichier d'extension <a href="passenger_tickets.ext.txt.html">passenger_tickets.ext.txt</a>.</p>
+<p>Ce fichier définit les titres de transport attribués aux usagers déclarés dans le fichier <a href="passengers.txt.html">passengers.txt</a>. La notion comptable peut être saisie dans un fichier d'extension <a href="passenger_tickets.ext.txt.html">passenger_tickets.ext.txt</a>.</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
@@ -144,44 +150,44 @@
 <tr>
 <td>ticket_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ ticket_id est un identifiant unique qui identifie le titre de transport.</td>
+<td>Identifiant unique du titre de transport.</td>
 </tr>
 <tr>
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id est un identifiant unique qui identifie l'usager.</td>
+<td>Identifiant de l'usager référencé.</td>
 </tr>
 <tr>
 <td>fare_id</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ fare_id est un identifiant unique qui identifie un tarif.</td>
+<td>Identifiant du tarif lié à ce titre de transport.</td>
 </tr>
 <tr>
 <td>ticket_start_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ ticket_start_on est la date début de validité du titre au format YYYYMMDDHHMMSS.</td>
+<td>Date de début de validité du titre au format <a href="types.html#Dates">YYYYMMDDhhmmss</a>.</td>
 </tr>
 <tr>
 <td>ticket_end_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ ticket_end_on est la date fin de validité du titre au format YYYYMMDDHHMMSS.</td>
+<td>Date de fin de validité du titre au format <a href="types.html#Dates">YYYYMMDDhhmmss</a>.</td>
 </tr>
 <tr>
 <td>restrictions</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ restrictions permet de définir les restrictions dans l'espace et le temps au format JSON</td>
+<td>Restrictions d'usage du titre dans l'espace et le temps, au <a href="types.html#JSON">format JSON</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
 T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></pre>
-<h2 id="gestion-des-restrictions">Gestion des restrictions</h2>
+<h2 id="fonctionnement-des-restrictions">Fonctionnement des restrictions</h2>
 <p>Il est possible de restreindre les tickets sur un ou plusieurs critères :</p>
 <ul>
 <li><code>network</code> Un réseau de transport (ex: Sur le réseau Scolaire)</li>
 <li><code>line</code> Une ligne (ex: Sur la ligne A ou B)</li>
-<li><code>trip</code> Une course (ex: Sur la course 10703)</li>
+<li><code>trip</code> Une course (ex: Sur la course 107-03A9)</li>
 <li><code>stoparea</code> Un arrêt commercial (ex: A l'arrêt &quot;Gare SNCF&quot;)</li>
 <li><code>stoppoint</code> Un arrêt physique (ex: A l'arrêt &quot;Gare SNCF&quot; sens Aller)</li>
 <li><code>zone</code> Une zone tarifaire (ex: Dans la zone tarif &quot;A&quot;)</li>
@@ -189,16 +195,13 @@ T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB""
 <li><code>time</code> Une plage horaire (ex: Entre 12h et 14h)</li>
 <li><code>calendar</code> Un calendrier (ex: En période de vacance scolaire)</li>
 </ul>
-<p>Les restrictions d'utilisation de tickets sont gérées au format JSON.</p>
-<p>/!\ Attention, ce JSON doit être échappé pour être stocké sous format texte dans le CSV.
-C'est à dire entouré de double quotes (<code>"</code>) et les doubles quotes du JSON doivent êtres doublées (<code>""</code>).
-Exemple : <code>[{"line":{"is":["LA","LB","LC"]}}]</code> devient <code>"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></p>
+<p>Les restrictions d'utilisation de tickets sont gérées au <a href="types.html#JSON">format JSON</a>.</p>
 <p>Une <strong>restriction</strong> est un tableau JSON d'une ou plusieurs règles : <code>[REGLE_A, REGLE_B]</code>
 L'utilisation du ticket est autorisé si au moins une des règles est valide.</p>
 <p>Une <strong>règle</strong> est un objet JSON d'un ou plusieurs critères cités ci-dessus : <code>{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}</code>
 La condition est également un objet du type <code>{"is":[REFERENCE_A, REFERENCE_B]}</code> ou <code>{"isnot":[REFERENCE_A, REFERENCE_B]}</code>.</p>
 <h3 id="exemples-de-json-de-restrictions">Exemples de JSON de restrictions</h3>
-<p>Note : Pour une raison de lisibilité ces JSON ne sont pas échappé (voir ci-dessus)</p>
+<p>Note : Pour une raison de lisibilité ces exemples au format JSON ne sont pas échappés (voir ci-dessus)</p>
 <p>Utilisable sur la ligne LA ou LB ou LC :</p>
 <pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
 <p>Utilisable uniquement en période de vacance scolaire (ref: CAL_SCOLAIRE)</p>

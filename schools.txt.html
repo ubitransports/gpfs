@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -144,70 +150,78 @@
 <tr>
 <td>school_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ school_id est un identifiant unique de l'établissement scolaire.</td>
+<td>Identifiant unique de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_name</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ name est le nom de l'établissement scolaire.</td>
+<td>Nom de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_shortname</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ shortname est le nom court de l'établissement scolaire.</td>
+<td>Nom court de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_1</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_adress_1 est l'adresse de l'établissement scolaire.</td>
+<td>Adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_2</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_adress_2 est un complément de l'adresse de l'établissement scolaire.</td>
+<td>Complément d'adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_3</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_adress_3 est un complément de l'adresse de l'établissement scolaire.</td>
+<td>Complément d'adresse de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_zipcode</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_adress_zipcode est le code postal de l'établissement scolaire.</td>
+<td>Code postal de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_city</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ address_city est la ville de l'établissement de l'établissement scolaire.</td>
+<td>Ville de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_address_country</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ address_country est le pays de l'établissement de l'établissement scolaire.</td>
+<td>Pays de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_email</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ email est l'adresse email de contact de l'établissement de l'établissement scolaire.</td>
+<td>Adresse e-mail de l'établissement scolaire.</td>
 </tr>
 <tr>
 <td>school_lat</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_lat permet de positionner l'établissement grâce à une position GPS. La latitude GPS doit être renseignée avec le système géodésique WGS 84 (<a href="https://fr.wikipedia.org/wiki/WGS_84">https://fr.wikipedia.org/wiki/WGS_84</a>).</td>
+<td>Latitude de l'établissement. Doit être renseignée avec le <a href="https://fr.wikipedia.org/wiki/WGS_84">système géodésique WGS 84</a>.</td>
 </tr>
 <tr>
 <td>school_lon</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ school_lon permet de positionner l'établissement grâce à une position GPS. La longitude GPS doit être renseignée avec le système géodésique WGS 84 (<a href="https://fr.wikipedia.org/wiki/WGS_84">https://fr.wikipedia.org/wiki/WGS_84</a>)</td>
+<td>Longitude de l'établissement. Doit être renseignée avec le <a href="https://fr.wikipedia.org/wiki/WGS_84">système géodésique WGS 84</a>.</td>
 </tr>
 <tr>
 <td>school_open_on</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Le champ open_on permet de définir les jours de la semaine où l'établissement est ouvert. Les valeurs valides pour chaque jour sont :  0 = Non et 1 = Oui.  Exemples : ouvert tous les jours de la semaine : 1111111, ouvert du lundi au vendredi : 1111100.</td>
+<td>Jours d'ouverture hebdomadaire de l'établissement au format binaire sur 7 caractères. Voir exemples ci-dessous.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="champ">Champ <code>school_open_on</code> et format binaire</h3>
+<p>Le champ <code>school_open_on</code> doit être exprimé sur 7 caractères correspondant aux 7 jours de la semaine et prenant la valeur 0 ou 1.</p>
+<p>Par exemple :</p>
+<ul>
+<li>ouverture du lundi au vendredi : <code>1111100</code></li>
+<li>ouverture lundi-mardi-jeudi-vendredi : <code>1101100</code>.</li>
+</ul>
+<p>Par défaut tous les jours sont inactifs (<code>0000000</code>)</p>
 <h2 id="exemple">Exemple</h2>
 <pre><code>school_id,school_name,school_shortname,school_address_1,school_address_2,school_address_3,school_address_zipcode,school_address_city,school_address_country,school_email,school_lat,school_lon,school_open_on
 SCHOOL1,Lycée PSS,PSS,1 rue de la mairie,,,71000,Mâcon,France,lycee.pss@gmail.com,4.8313,46.3062,1111100</code></pre>

@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -144,15 +150,20 @@
 <tr>
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id est un identifiant unique qui identifie l'usager.</td>
+<td>Identifiant de l'usager référencé.</td>
 </tr>
 <tr>
 <td>comment</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ comments est un commentaire associé à l'usager.</td>
+<td>Texte du commentaire.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="format-des-commentaires">Format des commentaires</h3>
+<p>Afin de respecter le format CSV, il faut échapper les éventuelles virgules en mettant l'ensemble du commentaire entre double quotes (<code>"</code>).</p>
+<p>Ex: </p>
+<pre><code>passenger_id,comment
+1,"Abonnement en cours de règlement, carte délivrée"</code></pre>
 <h2 id="exemple-">Exemple :</h2>
 <pre><code>passenger_id,comment
 P1,This is a comment on passenger 1

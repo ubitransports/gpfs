@@ -31,6 +31,12 @@
                         </li>
                                             <li class="toctree-l1 ">
                             <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/types.html">
+                                Types
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -144,59 +150,66 @@
 <tr>
 <td>booking_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ booking_id est un identifiant unique qui identifie une réservation.</td>
+<td>Identifiant unique de la réservation.</td>
 </tr>
 <tr>
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ passenger_id est un identifiant unique qui identifie l'usager.</td>
+<td>Identifie l'usager qui détient cette réservation. Ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
 </tr>
 <tr>
 <td>trip_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td>Le champ trip_id est la référence d'une course présente sur le cloud ou dans le GTFS</td>
+<td>Référence de la course, présente sur le cloud ou dans le GTFS, associée à cette réservation.</td>
 </tr>
 <tr>
 <td>origin_stoppoint_id</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ origin_stoppoint_id est la référence l'arrêt de montée présente sur le cloud ou dans le GTFS.</td>
+<td>Référence de l'arrêt de montée, présent sur le cloud ou dans le GTFS, associé à cette réservation.</td>
 </tr>
 <tr>
 <td>destination_stoppoint_id</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ origin_stoppoint_id est la référence l'arrêt de déscente présente sur le cloud ou dans le GTFS.</td>
+<td>Référence de l'arrêt de descente, présent sur le cloud ou dans le GTFS, associé à cette réservation.</td>
 </tr>
 <tr>
 <td>start_date</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ start_date définit la date de début de validité de la réservation au format YYYYMMDD.</td>
+<td>Date de début de validité de la réservation au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>end_date</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ end_date définit la date de fin de validité de la réservation au format YYYYMMDD.</td>
+<td>Date de fin de validité de la réservation au format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
 <td>days</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ days définit les jours de fonctionnement de la réservation au format numérique. Par exemple pour une réservation active que le ou les mercredis : 0010000 ou que les week-ends : 0000011. Par défaut tous les jours sont actifs (1111111)</td>
+<td>Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous.</td>
 </tr>
 <tr>
 <td>calendar_id</td>
 <td style="text-align: center;">optionnel</td>
-<td>Le champ calendar_id est un identifiant unique qui identifie un calendrier de fonctionnement.</td>
+<td>Identifiant unique du calendrier de fonctionnement défini dans le fichier <a href="calendars.txt">calendars.txt</a>.</td>
 </tr>
 </tbody>
 </table>
-<p>Pour définir la période de validité d'une réservation, vous avez deux possibilités de la renseigner :  </p>
+<h3 id="priode-de-validit">Période de validité</h3>
+<p>La période de validité d'une réservation doit être définie de l'une des deux manières suivantes :</p>
 <ul>
-<li>soit via les champs start_date, end_date et days</li>
-<li>
-<p>soit via le champ calendar_id qui sera en lien avec le fichier <a href="calendars.txt">calendrier</a>.</p>
-<p>si le champs calendar_id est renseigné, il sera pris en priorité pour définir la période de validité</p>
-</li>
+<li>Via les champs start_date, end_date et days</li>
+<li>Via le champ <code>calendar_id</code> qui sera en lien avec le fichier <a href="calendars.txt">calendars.txt</a>.</li>
 </ul>
-<h2 id="exemple-">Exemple :</h2>
+<p>Si le champs <code>calendar_id</code> est renseigné, il sera pris en priorité pour définir la période de validité</p>
+<h3 id="champ">Champ <code>days</code> et format binaire</h3>
+<p>Le champ <code>days</code> doit être exprimé sur 7 caractères correspondant aux 7 jours de la semaine et prenant la valeur 0 ou 1.</p>
+<p>Par exemple :</p>
+<ul>
+<li>pour une réservation active seulement le mercredi : <code>0010000</code></li>
+<li>seulement les week-ends : <code>0000011</code>.</li>
+</ul>
+<p>Par défaut tous les jours sont actifs (<code>1111111</code>)</p>
+<h2 id="exemples">Exemples</h2>
 <pre><code>booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id
 B1,P1,COURSE1,ARRET_MONTEE_1,ARRET_DESCENTE_10,20170101,20170102,0000001
 B2,P3,COURSE2,,,,,,C1

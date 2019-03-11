@@ -29,14 +29,14 @@
                                 Référence
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="http://ubitransports.github.io/gpfs/types.html">
                                 Types
                             </a>
                         </li>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/revision.html">
                                 Changelog
                             </a>
@@ -135,28 +135,39 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="changelog">Changelog</h1>
-<p>Ci-dessous la liste des évolutions du GPFS.</p>
-<h2 id="29-octobre-2018">29 Octobre 2018</h2>
+                        <h1 id="format-et-types-de-donnes">Format et types de données</h1>
+<h2 id="dates">Dates</h2>
+<h3 id="format">Format <code>YYYYMMDD</code></h3>
+<p>Ce format issu de la norme <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> représente une date selon 3 composantes :</p>
 <ul>
-<li>Ajout d'explications concernant les restictions d'usage de ticket définies dans le fichier <a href="passenger_tickets.txt.html">passenger_tickets.txt</a></li>
+<li>L'année (<code>YYYY</code>) sur 4 chiffres : <code>1988</code></li>
+<li>Le mois (<code>MM</code>) sur 3 chiffres : <code>07</code></li>
+<li>Le jour (<code>DD</code>) sur 2 chiffres : <code>08</code></li>
 </ul>
-<h2 id="05-octobre-2018">05 Octobre 2018</h2>
+<p>Exemple : <code>19880708</code> : 8 Juillet 1988</p>
+<h3 id="format-1">Format <code>YYYYMMDDhhmmss</code></h3>
+<p>Cette variante ajoute la notion d'heure au format précédent à l'aide de 3 composantes supplémentaires :</p>
 <ul>
-<li>Ajout d'un identifiant unique pour le responsable légal dans le fichier <a href="passenger_tutors.txt.html">passenger_tutors.txt</a></li>
+<li>Les heures (<code>hh</code>) sur 2 chiffres : <code>23</code></li>
+<li>Les minutes (<code>mm</code>) sur 2 chiffres : <code>59</code></li>
+<li>Les secondes (<code>ss</code>) sur 2 chiffres : <code>59</code></li>
 </ul>
-<h2 id="29-juin-2017">29 Juin 2017</h2>
+<p>Exemple : <code>20220708235959</code> : Le 8 Juillet 2022 à 23:59:59</p>
+<h2 id="numros-de-tlphone">Numéros de téléphone</h2>
+<p>Les numéros de téléphone doivent être saisis au <a href="https://fr.wikipedia.org/wiki/Plan_de_num%C3%A9rotation">format international</a>, dont la particularité est de préfixer les numéros par un <a href="https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_internationaux_par_pays">code pays</a>. </p>
+<p>Pour la France, le traditionnel <code>0</code> qu'on retrouve en début de numéro est remplacé par le code <code>+33</code>.</p>
+<p>Exemples pour des numéros français :</p>
 <ul>
-<li>Ajout des réservations liées aux usagers dans le fichier <a href="bookings.txt.html">bookings.txt</a></li>
-<li>Ajout des calendiers de fonctionnements dans le fichier <a href="calendars.txt.html">calendars.txt</a> et <a href="calendar_dates.txt.html">calendar_dates.txt</a></li>
+<li><code>0123456789</code> : <code>+33123456789</code></li>
+<li><code>0612345789</code> : <code>+33612345789</code></li>
 </ul>
-<h2 id="9-fvrier-2017">9 février 2017</h2>
+<h2 id="json">JSON</h2>
+<p>Les champs au format JSON doivent être échappés afin d'être correctement interprétés lors de la lecture du fichier au format CSV.</p>
+<p>Pour ce faire, il est préconisé de les entourer de double quotes (<code>"</code>), et de doubler les double quotes déjà présentes dans le JSON.</p>
+<p>Exemples :</p>
 <ul>
-<li>Ajout des cartes usager dans le fichier <a href="passenger_tags.txt.html">passenger_tags.txt</a></li>
-</ul>
-<h2 id="14-juin-2016">14 juin 2016</h2>
-<ul>
-<li>Création du standard GPFS</li>
+<li><code>{"key": "value"}</code> devient <code>"{""key"": ""value""}"</code> </li>
+<li><code>[{"line":{"is":["LA","LB","LC"]}}]</code> devient <code>"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></li>
 </ul>
                     </div>
 
