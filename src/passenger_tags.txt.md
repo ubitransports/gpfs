@@ -4,30 +4,28 @@ currentMenu: passenger_tags.txt
 
 # passenger_tags.txt
 
-Ce fichier contient les informations concernant les cartes des usagers ou des élèves.
+Ce fichier contient les informations sur les cartes des usagers.
 
 ## Description des colonnes
 
-| Nom du champ          |  Obligatoire    |  Description |
-|------------------------|:------------:|----------|
-| tag_id                 | **Obligatoire** |  Le champ tag_id est un identifiant unique de la carte. |
-| passenger_id           | **Obligatoire** |  Le champ passenger_id identifie l'usager qui détient cette carte, ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
-| uid                    | **Obligatoire** |  Le champ uid est l'identifiant physique de la carte, il doit être unique. |
-| uid_format             | optionnel       |  Le champ uid_format indique si la valeur du champs uid est au format hexadécimal ou décimal|
-| delivery_date          | optionnel       |  La date de remise de la carte au format YYYYMMDD.|
-| validity_end           | optionnel       |  La date prévisionnelle de fin de validité de la carte au format YYYYMMDD.|
-| disabled_date          | optionnel       |  La date effective de désactivation de la carte au format YYYYMMDD.|
-| disabled_cause         | optionnel       |  L'indication sur les raisons de la désactivation. la carte est perdue, volée, cassée... |
+| Nom du champ           |  Obligatoire    |  Longueur max |  Description |
+|------------------------|:------------:|------|----------|
+| tag_id                 | **Obligatoire** |   -  |  Identifiant unique de la carte. |
+| passenger_id           | **Obligatoire** |   -  |  Identifie l'usager qui détient cette carte. Ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
+| uid                    | **Obligatoire** |  **255** |  Identifiant physique de la carte. Il doit être unique. |
+| uid_format             | optionnel       |   -  |  Indique si la valeur du champ uid est au format hexadécimal ou décimal|
+| delivery_date          | optionnel       |   -  |  Date de remise de la carte au format [YYYYMMDD](types.html#Dates).|
+| validity_end           | optionnel       |   -  |  Date prévisionnelle de fin de validité de la carte au format [YYYYMMDD](types.html#Dates).|
+| disabled_date          | optionnel       |   -  |  Date effective de désactivation de la carte au format [YYYYMMDD](types.html#Dates).|
+| disabled_cause         | optionnel       |   -  |  Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas. |
 
-## Format des dates :
-* **YYYYMMDD**           : Année sur 4 chiffres, mois sur 2 chiffres et jour sur 2 chiffres.
 
-## Valeurs du champ "uid_format" :
+### Valeurs du champ "uid_format" :
 
 * **HEX** ou Vide : *Hexadécimal*.
 * **DEC** : *Décimal*.
 
-## Valeurs du champs "disabled_cause" :
+### Valeurs du champ "disabled_cause" :
 
 * **LOST**           : *Carte perdue*.
 * **STOLEN**         : *Carte volée*.

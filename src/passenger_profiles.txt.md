@@ -10,12 +10,12 @@ Ce fichier contient les associations entre les profils ([profiles.txt](profiles.
 
 | Nom du champ      |  Obligatoire    |  Description |
 |-----------------|:-----------:|----------|
-| passenger_id    |**Obligatoire** | Le champ passenger_id est un identifiant unique qui identifie l'usager. |
-| profil_id       |**Obligatoire** | Le champ profil_id est le nom du profil associé à l'usager. |
-| profil_start_on |  Optionnel   | Le champ start_on est la date de prise d'effet au format YYYYMMDD. |
-| profil_end_on   |  Optionnel   | Le champ start_on est la date d'expiration au format YYYYMMDD. |
+| passenger_id    |**Obligatoire** | Identifiant unique de l'usager. |
+| profil_id       |**Obligatoire** | Nom du profil associé à l'usager. |
+| profil_start_on |  Optionnel   | Date de prise d'effet au format [YYYYMMDD](types.html#Dates). |
+| profil_end_on   |  Optionnel   | Date d'expiration au format [YYYYMMDD](types.html#Dates). |
 
-##Exemple : 
+## Exemple : 
 
 ```
 passenger_id,profil_id,profil_start_on,profil_end_on
