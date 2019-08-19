@@ -25,6 +25,8 @@ T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB""
 
 ## Fonctionnement des restrictions
 
+Si le champ `restrictions` est rempli, la valeur définie remplacera les restrictions mises en place sur le tarif.  
+
 Il est possible de restreindre les tickets sur un ou plusieurs critères :
 
 - `network` Un réseau de transport (ex: Sur le réseau Scolaire)
