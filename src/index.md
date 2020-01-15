@@ -24,7 +24,7 @@ Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier co
 | [passenger_profiles.txt](passenger_profiles.txt.html) | Optionnel       | Association entre un profil et un usager. |
 | [schools.txt](schools.txt.html)                       | Optionnel       | Informations concernant les établissements scolaires fréquentés par un usager. |
 | [passenger_schools.txt](passenger_schools.txt.html)   | Optionnel       | Association d'un établissement scolaire à un usager.  |
-| [bookings.txt](bookings.txt.html)                     | Optionnel       | les réservations associées aux usagers.|
+| [bookings.txt](bookings.txt.html)                     | Optionnel       | Les réservations associées aux usagers.|
 | [calendars.txt](calendars.txt.html)                   | Optionnel       | Informations concernant les calendriers de fonctionnement.|
 | [calendar_dates.txt](calendar_dates.txt.html)         | Optionnel       | Informations concernant les dates à inclure ou exclure d'un calendrier.|
 | pictures/                                             | Optionnel       | Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt. |
@@ -34,7 +34,7 @@ Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier co
 Les prérequis suivants s'appliquent au format et contenu des fichiers :
 
 * Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.
-* Les noms de fichiers sont sensible à la casse.
+* Les noms de fichiers sont sensibles à la casse.
 * La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non utilisé, la colonne peut être omise.
 * Tous les noms de champs sont sensibles à la casse.
 * Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.
