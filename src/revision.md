@@ -6,9 +6,13 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 17 Janvier 2020
+
+* Ajout du champ additional_data dans le fichier [passengers.txt](passengers.txt.html).
+
 ## 11 Mars 2019
 
-* Ajout d'explications sur les types et les formats des différents champs. 
+* Ajout d'explications sur les types et les formats des différents champs.
 * Ajout d'une [page](types.html) dédiée aux types de données.
 
 ## 29 Octobre 2018
@@ -19,7 +23,7 @@ Ci-dessous la liste des évolutions du GPFS.
 
 * Ajout d'un identifiant unique pour le responsable légal dans le fichier [passenger_tutors.txt](passenger_tutors.txt.html)
 
-## 29 Juin 2017  
+## 29 Juin 2017
 
 * Ajout des réservations liées aux usagers dans le fichier [bookings.txt](bookings.txt.html)
 * Ajout des calendiers de fonctionnements dans le fichier [calendars.txt](calendars.txt.html) et [calendar_dates.txt](calendar_dates.txt.html)
