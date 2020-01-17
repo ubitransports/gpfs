@@ -251,13 +251,23 @@
 <td>-</td>
 <td>Nom de l'image à associer au profil de l'usager avec son extension. Exemple: <code>1235235.jpg</code></td>
 </tr>
+<tr>
+<td>additional_data</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Données complémentaires liées à l'usager, au <a href="types.html#JSON">format JSON</a></td>
+</tr>
 </tbody>
 </table>
 <h3 id="prise-en-charge-des-images">Prise en charge des images</h3>
 <p>Les images seront à placer dans un dossier <code>pictures</code> à la racine de l'archive, c'est-à-dire au même niveau que les fichiers .txt</p>
+<h3 id="exemple-de-json-de-additional_data">Exemple de JSON de additional_data</h3>
+<p>Le champ additional_data peut contenir <strong>plusieurs combinaisons de clé/valeur</strong>.
+Le contenu de la cle et de la valeur doit être une chaine de <strong>caractères alphanumériques</strong>.</p>
+<pre><code>"{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
 <h2 id="exemple-">Exemple :</h2>
-<pre><code>passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name
-P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,71000,Mâcon,France,</code></pre>
+<pre><code>passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,additional_data
+P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,71000,Mâcon,France,"","{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
                     </div>
 
                     <footer>
