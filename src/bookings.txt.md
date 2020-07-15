@@ -13,8 +13,8 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 | booking_id                | **Obligatoire** | Identifiant unique de la réservation.|
 | passenger_id              | **Obligatoire** | Identifie l'usager qui détient cette réservation. Ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
 | trip_id                   | **Obligatoire** | Référence de la course, présente sur le cloud ou dans le GTFS, associée à cette réservation. |
-| origin_stoppoint_id       | optionnel       | Référence de l'arrêt de montée, présent sur le cloud ou dans le GTFS, associé à cette réservation. |
-| destination_stoppoint_id  | optionnel       | Référence de l'arrêt de descente, présent sur le cloud ou dans le GTFS, associé à cette réservation. |
+| origin_stoppoint_id       | optionnel       | Référence de l'arrêt commercial de montée, présent sur le cloud ou dans le GTFS, associé à cette réservation. |
+| destination_stoppoint_id  | optionnel       | Référence de l'arrêt commercial de descente, présent sur le cloud ou dans le GTFS, associé à cette réservation. |
 | start_date                | optionnel       | Date de début de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | end_date                  | optionnel       | Date de fin de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | days                      | optionnel       | Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous. |
