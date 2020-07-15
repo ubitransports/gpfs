@@ -6,6 +6,10 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 28 Avril 2020
+
+* Ajout du champ `unboarding_restrictions` dans le fichier [passenger-tickets.txt](passenger_tickets.txt.html).
+
 ## 17 Janvier 2020
 
 * Ajout du champ additional_data dans le fichier [passengers.txt](passengers.txt.html).

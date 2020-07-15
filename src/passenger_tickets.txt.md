@@ -8,14 +8,15 @@ Ce fichier définit les titres de transport attribués aux usagers déclarés da
 
 ## Description des colonnes
 
-| Nom du champ      |  Obligatoire    |  Description |
-|-----------------|:------------:|----------|
-| ticket_id       | **Obligatoire** | Identifiant unique du titre de transport. |
-| passenger_id    | **Obligatoire** | Identifiant de l'usager référencé. |
-| fare_id         |  Optionnel    | Identifiant du tarif lié à ce titre de transport.  |
-| ticket_start_on |  Optionnel    | Date de début de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates).  |
-| ticket_end_on   |  Optionnel    | Date de fin de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates).  |
-| restrictions    |  Optionnel    | Restrictions d'usage du titre dans l'espace et le temps, au [format JSON](types.html#JSON)  |
+| Nom du champ            |  Obligatoire    |  Description |
+|-------------------------|:---------------:|--------------|
+| ticket_id               | **Obligatoire** | Identifiant unique du titre de transport. |
+| passenger_id            | **Obligatoire** | Identifiant de l'usager référencé. |
+| fare_id                 |  Optionnel      | Identifiant du tarif lié à ce titre de transport. |
+| ticket_start_on         |  Optionnel      | Date de début de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates). |
+| ticket_end_on           |  Optionnel      | Date de fin de validité du titre au format [YYYYMMDDhhmmss](types.html#Dates). |
+| restrictions            |  Optionnel      | Restrictions d'usage du titre, pour la montée, dans l'espace et le temps, au [format JSON](types.html#JSON) |
+| unboarding_restrictions |  Optionnel      | Restrictions d'usage du titre, pour la descente, dans l'espace et le temps, au [format JSON](types.html#JSON) |
 
 ## Exemple :
 ```
@@ -25,7 +26,7 @@ T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB""
 
 ## Fonctionnement des restrictions
 
-Si le champ `restrictions` est rempli, la valeur définie remplacera les restrictions mises en place sur le tarif.  
+Si les champs `restrictions` et/ou `unboarding_restrictions` sont remplis, les valeurs définies remplaceront les restrictions mises en place sur le tarif.  
 
 Il est possible de restreindre les tickets sur un ou plusieurs critères :
 
