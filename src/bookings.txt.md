@@ -19,6 +19,7 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 | end_date                  | optionnel       | Date de fin de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | days                      | optionnel       | Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous. |
 | calendar_id               | optionnel       | Identifiant unique du calendrier de fonctionnement défini dans le fichier [calendars.txt](calendars.txt). |
+| fare_seat_id              | optionnel       | Identifiant unique du siège défini dans le fichier [seats.txt](seats.txt). |
 
 ### Période de validité
 
@@ -42,8 +43,8 @@ Par défaut tous les jours sont actifs (`1111111`)
 ## Exemples
 
 ```
-booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id
-B1,P1,COURSE1,ARRET_MONTEE_1,ARRET_DESCENTE_10,20170101,20170102,0000001
-B2,P3,COURSE2,,,,,,C1
+booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id, fare_seat_id
+B1,P1,COURSE1,ARRET_MONTEE_1,ARRET_DESCENTE_10,20170101,20170102,0000001,DC1
+B2,P3,COURSE2,,,,,,C1,DC2
 B3,P2,COURSE5,ARRET_MONTEE_2,ARRET_DESCENTE_10,,,,C10
 ```
