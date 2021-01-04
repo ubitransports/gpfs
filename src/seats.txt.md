@@ -4,7 +4,7 @@ currentMenu: seats.txt
 
 # seats.txt
 
-Ce fichier contient les informations concernant les sièges qui puevtn être réservés dans  [bookings.txt](bookings.txt.html).
+Ce fichier contient les informations concernant les sièges qui peuvent être réservés dans  [bookings.txt](bookings.txt.html).
 
 ## Description des colonnes
 
