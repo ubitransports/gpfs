@@ -1,10 +1,10 @@
 ---
-currentMenu: faer_seats.txt
+currentMenu: seats.txt
 ---
 
-# fare_seats.txt
+# seats.txt
 
-Ce fichier contient les informations concernant les dates à inclure ou exclure d'un calendrier défini dans le fichier [calendars.txt](calendars.txt.html).
+Ce fichier contient les informations concernant les sièges qui puevtn être réservés dans  [bookings.txt](bookings.txt.html).
 
 ## Description des colonnes
 
