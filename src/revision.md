@@ -6,6 +6,10 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 31 Décembre 2020
+
+* Ajout d'une page [seats.txt](seats.txt.html) décrivant le format des réservations de siège
+* Ajout du champ `seat_id` dans le fichier [bookings.txt](bookings.txt.html) associant une réservation à un siège.
 ## 28 Avril 2020
 
 * Ajout du champ `unboarding_restrictions` dans le fichier [passenger-tickets.txt](passenger_tickets.txt.html).
