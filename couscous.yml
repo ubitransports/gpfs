@@ -61,3 +61,6 @@ menu:
         calendar_dates.txt:
             text: calendar_dates.txt
             relativeUrl: calendar_dates.txt.html
+        passenger_organizations.txt:
+            text: passenger_organizations.txt
+            relativeUrl: passenger_organizations.txt.html
