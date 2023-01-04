@@ -6,9 +6,13 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 4 Janvier 2023
+
+* Ajout de la relation usagers et autorités organisatrice avec le fichier [passenger_organizations.txt](passenger_organizations.txt.html)
+
 ## 28 Avril 2020
 
-* Ajout du champ `unboarding_restrictions` dans le fichier [passenger-tickets.txt](passenger_tickets.txt.html).
+* Ajout du champ `unboarding_restrictions` dans le fichier [passenger_tickets.txt](passenger_tickets.txt.html).
 
 ## 17 Janvier 2020
 
