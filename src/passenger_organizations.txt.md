@@ -2,7 +2,7 @@
 currentMenu: passenger_organizations.txt
 ---
 
-# passenger_schools.txt
+# passenger_organizations.txt
 
 Ce fichier contient les associations entre les Autorités Organisatrices (AO) et les usagers ([passengers.txt](passengers.txt.html)).
 
