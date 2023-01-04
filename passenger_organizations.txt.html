@@ -47,8 +47,8 @@
                                 
                             </a>
                         </li>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/passengers.txt.html">
                                 passengers.txt
                             </a>
@@ -119,8 +119,8 @@
                                 calendar_dates.txt
                             </a>
                         </li>
-                                            <li class="toctree-l1 ">
-                            <a class="reference internal "
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
                                href="http://ubitransports.github.io/gpfs/passenger_organizations.txt.html">
                                 passenger_organizations.txt
                             </a>
@@ -141,9 +141,8 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="passengerstxt">passengers.txt</h1>
-<p><strong>/!\ Ce fichier est obligatoire.</strong></p>
-<p>Ce fichier contient les informations concernant les usagers pouvant utiliser le réseau de transport.</p>
+                        <h1 id="passenger_organizationstxt">passenger_organizations.txt</h1>
+<p>Ce fichier contient les associations entre les Autorités Organisatrices (AO) et les usagers (<a href="passengers.txt.html">passengers.txt</a>).</p>
 <h2 id="description-des-colonnes">Description des colonnes</h2>
 <table>
 <thead>
@@ -159,121 +158,21 @@
 <td>passenger_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
 <td>-</td>
-<td>Identifiant unique qui identifie l'usager.</td>
+<td>Identifiant de l'usager référencé. Ce champ est défini dans le fichier <a href="passengers.txt.html">passengers.txt</a>.</td>
 </tr>
 <tr>
-<td>passenger_file_number</td>
+<td>organization_id</td>
 <td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td><strong>255</strong></td>
-<td>Numéro de dossier de l'usager.</td>
-</tr>
-<tr>
-<td>passenger_firstname</td>
-<td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td><strong>255</strong></td>
-<td>Prénom de l'usager</td>
-</tr>
-<tr>
-<td>passenger_lastname</td>
-<td style="text-align: center;"><strong>Obligatoire</strong></td>
-<td><strong>255</strong></td>
-<td>Nom de l'usager</td>
-</tr>
-<tr>
-<td>passenger_gender_title</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>30</strong></td>
-<td>Civilité de l'usager. Il peut s'agir de n'importe quel texte (exemple : Mme, Mlle, M...).</td>
-</tr>
-<tr>
-<td>passenger_dateofbirth</td>
-<td style="text-align: center;">Optionnel</td>
-<td>-</td>
-<td>Date de naissance de l'usager au format <a href="types.html#Dates">YYYYMMDD</a></td>
-</tr>
-<tr>
-<td>passenger_gender</td>
-<td style="text-align: center;">Optionnel</td>
-<td>-</td>
-<td>Sexe de l'usager.  Valeurs acceptées :  0 = Non communiqué, 1 = homme, 2 = femme</td>
-</tr>
-<tr>
-<td>passenger_email</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Adresse email de contact de l'usager</td>
-</tr>
-<tr>
-<td>passenger_mobile_phone</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Numéro de téléphone portable de l'usager, <a href="types.html">au format international</a></td>
-</tr>
-<tr>
-<td>passenger_home_phone</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Numéro de téléphone du domicile de l'usager, <a href="types.html">au format international</a></td>
-</tr>
-<tr>
-<td>passenger_address_1</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Adresse postale de l'usager</td>
-</tr>
-<tr>
-<td>passenger_address_2</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Complément d'adresse postale</td>
-</tr>
-<tr>
-<td>passenger_address_3</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Complément d'adresse postale</td>
-</tr>
-<tr>
-<td>passenger_address_zipcode</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Code postal de l'usager</td>
-</tr>
-<tr>
-<td>passenger_address_city</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Ville d'habitation de l'usager</td>
-</tr>
-<tr>
-<td>passenger_address_country</td>
-<td style="text-align: center;">Optionnel</td>
-<td><strong>255</strong></td>
-<td>Pays d'habitation de l'usager</td>
-</tr>
-<tr>
-<td>passenger_picture_name</td>
-<td style="text-align: center;">Optionnel</td>
-<td>-</td>
-<td>Nom de l'image à associer au profil de l'usager avec son extension. Exemple: <code>1235235.jpg</code></td>
-</tr>
-<tr>
-<td>additional_data</td>
-<td style="text-align: center;">Optionnel</td>
-<td>-</td>
-<td>Données complémentaires liées à l'usager, au <a href="types.html#JSON">format JSON</a></td>
+<td>256</td>
+<td>Identifiant de l'AO.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="prise-en-charge-des-images">Prise en charge des images</h3>
-<p>Les images seront à placer dans un dossier <code>pictures</code> à la racine de l'archive, c'est-à-dire au même niveau que les fichiers .txt</p>
-<h3 id="exemple-de-json-de-additional_data">Exemple de JSON de additional_data</h3>
-<p>Le champ additional_data peut contenir <strong>plusieurs combinaisons de clé/valeur</strong>.
-Le contenu de la cle et de la valeur doit être une chaine de <strong>caractères alphanumériques</strong>.</p>
-<pre><code>"{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
 <h2 id="exemple-">Exemple :</h2>
-<pre><code>passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,additional_data
-P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,,71000,Mâcon,France,"","{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
+<pre><code>passenger_id,organization_id
+P1,ORGA1
+P2,ORGA2
+P2,ORGA1</code></pre>
                     </div>
 
                     <footer>

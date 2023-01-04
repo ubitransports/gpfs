@@ -119,6 +119,12 @@
                                 calendar_dates.txt
                             </a>
                         </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/passenger_organizations.txt.html">
+                                passenger_organizations.txt
+                            </a>
+                        </li>
                                     </ul>
             </div>
             &nbsp;
@@ -137,7 +143,8 @@
                     <div role="main" class="document">
                         <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
 <p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transport.
-Cette norme a été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents acteurs du transport comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
+Cette norme a été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents
+acteurs du transport comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
 <p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
 <h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
 <p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP.</p>
@@ -211,6 +218,11 @@ Cette norme a été mise en place afin de simplifier la <strong>transmission des
 <td>Informations concernant les dates à inclure ou exclure d'un calendrier.</td>
 </tr>
 <tr>
+<td><a href="passenger_organizations.txt.html">passenger_organization.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Association d'une (ou des) Autorité(s) Organisatrice(s) à un usager</td>
+</tr>
+<tr>
 <td>pictures/</td>
 <td style="text-align: center;">Optionnel</td>
 <td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
@@ -222,7 +234,8 @@ Cette norme a été mise en place afin de simplifier la <strong>transmission des
 <ul>
 <li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.</li>
 <li>Les noms de fichiers sont sensibles à la casse.</li>
-<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non utilisé, la colonne peut être omise.</li>
+<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non
+utilisé, la colonne peut être omise.</li>
 <li>Tous les noms de champs sont sensibles à la casse.</li>
 <li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
 <li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.</li>

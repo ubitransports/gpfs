@@ -119,6 +119,12 @@
                                 calendar_dates.txt
                             </a>
                         </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/passenger_organizations.txt.html">
+                                passenger_organizations.txt
+                            </a>
+                        </li>
                                     </ul>
             </div>
             &nbsp;
@@ -175,7 +181,12 @@
 <tr>
 <td>restrictions</td>
 <td style="text-align: center;">Optionnel</td>
-<td>Restrictions d'usage du titre dans l'espace et le temps, au <a href="types.html#JSON">format JSON</a></td>
+<td>Restrictions d'usage du titre, pour la montée, dans l'espace et le temps, au <a href="types.html#JSON">format JSON</a></td>
+</tr>
+<tr>
+<td>unboarding_restrictions</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Restrictions d'usage du titre, pour la descente, dans l'espace et le temps, au <a href="types.html#JSON">format JSON</a></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +194,7 @@
 <pre><code>ticket_id,passenger_id,fare_id,ticket_start_on,ticket_end_on,restrictions
 T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></pre>
 <h2 id="fonctionnement-des-restrictions">Fonctionnement des restrictions</h2>
-<p>Si le champ <code>restrictions</code> est rempli, la valeur définie remplacera les restrictions mises en place sur le tarif.  </p>
+<p>Si les champs <code>restrictions</code> et/ou <code>unboarding_restrictions</code> sont remplis, les valeurs définies remplaceront les restrictions mises en place sur le tarif.  </p>
 <p>Il est possible de restreindre les tickets sur un ou plusieurs critères :</p>
 <ul>
 <li><code>network</code> Un réseau de transport (ex: Sur le réseau Scolaire)</li>
