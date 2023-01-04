@@ -1,9 +1,10 @@
 name: Couscous GithubPage
 
-# on:
-#   push:
-#     branches:
-#       - master
+on:
+  push:
+    branches:
+      - master
+      - DEV-973-deploy
 
 jobs:
   deploy:
