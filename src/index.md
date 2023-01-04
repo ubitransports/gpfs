@@ -28,7 +28,7 @@ Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier co
 | [bookings.txt](bookings.txt.html)                     | Optionnel       | Les réservations associées aux usagers.                                                                                       |
 | [calendars.txt](calendars.txt.html)                   | Optionnel       | Informations concernant les calendriers de fonctionnement.                                                                    |
 | [calendar_dates.txt](calendar_dates.txt.html)         | Optionnel       | Informations concernant les dates à inclure ou exclure d'un calendrier.                                                       |
-| [passenger_organization.txt](organization.txt.html)   | Optionnel       | Association d'une (ou des) Autorité(s) Organisatrice(s) à un usager                                                                         |
+| [passenger_organization.txt](passenger_organizations.txt.html)   | Optionnel       | Association d'une (ou des) Autorité(s) Organisatrice(s) à un usager                                                                         |
 | pictures/                                             | Optionnel       | Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt. |
 
 ## Prérequis
