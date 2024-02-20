@@ -23,8 +23,8 @@
 
             <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                                            <li class="toctree-l1 current">
-                            <a class="reference internal current"
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
                                href="http://ubitransports.github.io/gpfs/index.html">
                                 EN
                             </a>
@@ -57,109 +57,126 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="overview-of-gpfs-standard-general-passenger-feed-specification">Overview of GPFS standard (General Passenger Feed Specification)</h1>
-<p>GPFS is a standard for exchanging user data within a framework of interoperability of transport networks.
-This standard was put in place to simplify the transmission of user information between the different transport players,
-as does the GTFS for network topology data.</p>
-<p>This documentation describes the characteristics of the GPFS standard.</p>
-<h2 id="list-of-files">List of files</h2>
-<p>List of files and folders contained in a GPFS stream, which is a folder compressed in ZIP format.</p>
+                        <h1 id="passenger_tutorstxt">passenger_tutors.txt</h1>
+<p>This file contains information concerning the legal guardians of users defined in the <a href="passengers.txt.html">passengers.txt</a>.</p>
+<h2 id="description-of-columns">Description of columns</h2>
 <table>
 <thead>
 <tr>
-<th>Filename</th>
+<th>Field name</th>
 <th style="text-align: center;">Mandatory</th>
+<th>Max length</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="en/passengers.txt.html">passengers.txt</a></td>
+<td>tutor_id</td>
 <td style="text-align: center;"><strong>Mandatory</strong></td>
-<td>Information concerning users who can use the transport network.</td>
+<td>-</td>
+<td>Unique identifier of the tutor.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_comments.txt.html">passenger_comments.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Comments associated to users.</td>
+<td>passenger_id</td>
+<td style="text-align: center;"><strong>Mandatory</strong></td>
+<td>-</td>
+<td>Identifier of the user associated with this tutor.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_tutors.txt.html">passenger_tutors.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information concerning passengers' tutor.</td>
+<td>tutor_firstname</td>
+<td style="text-align: center;"><strong>Mandatory</strong></td>
+<td><strong>255</strong></td>
+<td>First name of the tutor.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_tags.txt.html">passenger_tags.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Definition of the passeners' tags.</td>
+<td>tutor_lastname</td>
+<td style="text-align: center;"><strong>Mandatory</strong></td>
+<td><strong>255</strong></td>
+<td>First name of the tutor.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_tickets.txt.html">passenger_tickets.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Transport tickets (tickets or subscriptions) associated to a passenger.</td>
+<td>tutor_gender_title</td>
+<td style="text-align: center;">Optionnel</td>
+<td><strong>30</strong></td>
+<td>Title of the tutor; It can be any text (example: Mrs, Miss, Mr...).</td>
 </tr>
 <tr>
-<td><a href="en/profiles.txt.html">profiles.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Passenger profiles.</td>
+<td>tutor_parent_link</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Relationship between the user and the tutor. Accepted values: 0 = not communicated, 1 = mother, 2 = father, 3 = legal guardian.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_profiles.txt.html">passenger_profiles.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association between a profile and a user.</td>
+<td>tutor_email</td>
+<td style="text-align: center;">Optionnel</td>
+<td><strong>255</strong></td>
+<td>Email of the tutor</td>
 </tr>
 <tr>
-<td><a href="en/schools.txt.html">schools.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information concerning school data.</td>
+<td>tutor_mobile_phone</td>
+<td style="text-align: center;">Optionnel</td>
+<td><strong>255</strong></td>
+<td>Mobile phone number of the tutor, <a href="types.html">in international format</a>.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_schools.txt.html">passenger_schools.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association between schools and passengers.</td>
+<td>tutor_home_phone</td>
+<td style="text-align: center;">Optionnel</td>
+<td><strong>255</strong></td>
+<td>Home phone number of the tutor, <a href="types.html">in international format</a>.</td>
 </tr>
 <tr>
-<td><a href="en/bookings.txt.html">bookings.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Reservations associated with users.</td>
+<td>tutor_work_phone</td>
+<td style="text-align: center;">Optionnel</td>
+<td><strong>255</strong></td>
+<td>Work phone number of the tutor, <a href="types.html">in international format</a>.</td>
 </tr>
 <tr>
-<td><a href="en/calendars.txt.html">calendars.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information regarding operating schedules.</td>
+<td>tutor_dateofbirth</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Birthdate of the tutor in format <a href="types.html#Dates">YYYYMMDD</a>.</td>
 </tr>
 <tr>
-<td><a href="en/calendar_dates.txt.html">calendar_dates.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information about dates to include or exclude from a calendar.</td>
+<td>tutor_address_1</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Address of the tutor.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_organizations.txt.html">passenger_organization.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association of one (or more) Organizing Authority(ies) to a user.</td>
+<td>tutor_address_2</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Additional address of the tutor.</td>
 </tr>
 <tr>
-<td>pictures/</td>
-<td style="text-align: center;">Optional</td>
-<td>File containing users’ photos. The photo name must match the one defined in the passengers.txt file.</td>
+<td>tutor_address_3</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Additional address of the tutor.</td>
+</tr>
+<tr>
+<td>tutor_address_zipcode</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Zipcode of the tutor.</td>
+</tr>
+<tr>
+<td>tutor_address_city</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>City of the tutor.</td>
+</tr>
+<tr>
+<td>tutor_address_country</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>Country of the tutor.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="requirements">Requirements</h2>
-<p>The following prerequisites apply to file format and content:</p>
-<ul>
-<li>All files in a GPFS must be saved in TXT format and their values ​​will be separated by commas.</li>
-<li>File names are case sensitive.</li>
-<li>The first line of each file must contain the names of the columns used. If a field is Optional and not used, the column can be omitted.</li>
-<li>All field names are case sensitive.</li>
-<li>Values must not contain tabs or newlines.</li>
-<li>Field names and values must not have spaces before and after them.</li>
-<li>Files must be encoded in UTF-8.</li>
-<li>Files must be contained in a compressed folder in ZIP format.</li>
-<li>The order of lines in each file does not matter.</li>
-</ul>
-<h2 id="types">Types</h2>
-<p>This is a list with the used <a href="en/types.html">types</a>.</p>
+<h2 id="example-">Example :</h2>
+<pre><code>tutor_id,passenger_id,tutor_firstname,tutor_lastname,tutor_gender_title,tutor_parent_link,tutor_email,tutor_mobile_phone,tutor_home_phone,tutor_work_phone,tutor_dateofbirth,tutor_address_1,tutor_address_2,tutor_address_3,tutor_address_zipcode,tutor_address_city,tutor_address_country
+T1,P1,Paul,Doe,M,2,paul.doe@gmail.com,+33600000000,,,19600601,36 rue du pont,,,71000,Mâcon,France</code></pre>
                     </div>
 
                     <footer>

@@ -57,109 +57,87 @@
                         <div class="wy-nav-content">
                 <div class="rst-content">
                     <div role="main" class="document">
-                        <h1 id="overview-of-gpfs-standard-general-passenger-feed-specification">Overview of GPFS standard (General Passenger Feed Specification)</h1>
-<p>GPFS is a standard for exchanging user data within a framework of interoperability of transport networks.
-This standard was put in place to simplify the transmission of user information between the different transport players,
-as does the GTFS for network topology data.</p>
-<p>This documentation describes the characteristics of the GPFS standard.</p>
-<h2 id="list-of-files">List of files</h2>
-<p>List of files and folders contained in a GPFS stream, which is a folder compressed in ZIP format.</p>
+                        <h1 id="bookingstxt">bookings.txt</h1>
+<p>This file contains the reservations associated to the users defined in bookings.txt</p>
+<h2 id="description-of-columns">Description of columns</h2>
 <table>
 <thead>
 <tr>
-<th>Filename</th>
+<th>Field name</th>
 <th style="text-align: center;">Mandatory</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="en/passengers.txt.html">passengers.txt</a></td>
+<td>booking_id</td>
 <td style="text-align: center;"><strong>Mandatory</strong></td>
-<td>Information concerning users who can use the transport network.</td>
+<td>Unique identifier of the reservation..</td>
 </tr>
 <tr>
-<td><a href="en/passenger_comments.txt.html">passenger_comments.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Comments associated to users.</td>
+<td>passenger_id</td>
+<td style="text-align: center;"><strong>Mandatory</strong></td>
+<td>Identifier of the user who holds this reservation. This field is defined in the <a href="passengers.txt.html">passengers.txt</a></td>
 </tr>
 <tr>
-<td><a href="en/passenger_tutors.txt.html">passenger_tutors.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information concerning passengers' tutor.</td>
+<td>trip_id</td>
+<td style="text-align: center;"><strong>Mandatory</strong></td>
+<td>Reference of the trip, present on the cloud or in the GTFS, associated with this reservation.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_tags.txt.html">passenger_tags.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Definition of the passeners' tags.</td>
+<td>origin_stoppoint_id</td>
+<td style="text-align: center;">optional</td>
+<td>Reference of the origin stoppoint, present on the cloud or in the GTFS, associated with this booking.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_tickets.txt.html">passenger_tickets.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Transport tickets (tickets or subscriptions) associated to a passenger.</td>
+<td>destination_stoppoint_id</td>
+<td style="text-align: center;">optional</td>
+<td>Reference of the destination stoppoint, present on the cloud or in the GTFS, associated with this booking.</td>
 </tr>
 <tr>
-<td><a href="en/profiles.txt.html">profiles.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Passenger profiles.</td>
+<td>start_date</td>
+<td style="text-align: center;">optional</td>
+<td>Start date of validity of the booking in <a href="types.html#Dates">YYYYMMDD</a></td>
 </tr>
 <tr>
-<td><a href="en/passenger_profiles.txt.html">passenger_profiles.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association between a profile and a user.</td>
+<td>end_date</td>
+<td style="text-align: center;">optional</td>
+<td>End date of validity of the reservation in <a href="types.html#Dates">YYYYMMDD</a></td>
 </tr>
 <tr>
-<td><a href="en/schools.txt.html">schools.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information concerning school data.</td>
+<td>days</td>
+<td style="text-align: center;">optional</td>
+<td>Days of operation of the booking in binary format on 7 characters. See examples below.</td>
 </tr>
 <tr>
-<td><a href="en/passenger_schools.txt.html">passenger_schools.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association between schools and passengers.</td>
-</tr>
-<tr>
-<td><a href="en/bookings.txt.html">bookings.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Reservations associated with users.</td>
-</tr>
-<tr>
-<td><a href="en/calendars.txt.html">calendars.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information regarding operating schedules.</td>
-</tr>
-<tr>
-<td><a href="en/calendar_dates.txt.html">calendar_dates.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Information about dates to include or exclude from a calendar.</td>
-</tr>
-<tr>
-<td><a href="en/passenger_organizations.txt.html">passenger_organization.txt</a></td>
-<td style="text-align: center;">Optional</td>
-<td>Association of one (or more) Organizing Authority(ies) to a user.</td>
-</tr>
-<tr>
-<td>pictures/</td>
-<td style="text-align: center;">Optional</td>
-<td>File containing users’ photos. The photo name must match the one defined in the passengers.txt file.</td>
+<td>calendar_id</td>
+<td style="text-align: center;">optional</td>
+<td>Unique identifier of the operating calendar defined in <a href="calendars.txt.html">calendars.txt</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="requirements">Requirements</h2>
-<p>The following prerequisites apply to file format and content:</p>
+<p>&nbsp;</p>
+<h3 id="validity-period">Validity period</h3>
+<p>The validity period of a reservation must be defined in one of two ways:</p>
 <ul>
-<li>All files in a GPFS must be saved in TXT format and their values ​​will be separated by commas.</li>
-<li>File names are case sensitive.</li>
-<li>The first line of each file must contain the names of the columns used. If a field is Optional and not used, the column can be omitted.</li>
-<li>All field names are case sensitive.</li>
-<li>Values must not contain tabs or newlines.</li>
-<li>Field names and values must not have spaces before and after them.</li>
-<li>Files must be encoded in UTF-8.</li>
-<li>Files must be contained in a compressed folder in ZIP format.</li>
-<li>The order of lines in each file does not matter.</li>
+<li>Via the <code>start_date</code>, <code>end_date</code> and days fields</li>
+<li>Via the field <code>calendar_id</code> which will be linked to <a href="calendars.txt.html">calendars.txt</a> file.</li>
 </ul>
-<h2 id="types">Types</h2>
-<p>This is a list with the used <a href="en/types.html">types</a>.</p>
+<p>If the field <code>calendar_id</code> is filled in, it will be taken as priority to define the validity period.</p>
+<h3 id="field">Field <code>days</code> and binary format</h3>
+<p>The field <code>days</code> must be expressed in 7 characters corresponding to the 7 days of the week and taking the value 0 or 1.</p>
+<p>For example:</p>
+<ul>
+<li>for an active reservation only on Wednesday: <code>0010000</code></li>
+<li>only on the weekends: <code>0000011</code></li>
+</ul>
+<p>&nbsp;
+By default, all days are active (<code>1111111</code>)</p>
+<h2 id="examples">Examples</h2>
+<pre><code>booking_id,passenger_id,trip_id,origin_stoppoint_id,destination_stoppoint_id,start_date,end_date,days,calendar_id
+B1,P1,COURSE1,ARRET_MONTEE_1,ARRET_DESCENTE_10,20170101,20170102,0000001
+B2,P3,COURSE2,,,,,,C1
+B3,P2,COURSE5,ARRET_MONTEE_2,ARRET_DESCENTE_10,,,,C10</code></pre>
                     </div>
 
                     <footer>

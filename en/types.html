@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPFS Reference</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="http://ubitransports.github.io/gpfs/" class="fa fa-users"> GPFS Reference</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/index.html">
+                                EN
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/fr/reference.html">
+                                FR
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/changelog.html">
+                                Changelog
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="http://ubitransports.github.io/gpfs/">GPFS Reference</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h1 id="data-format-and-types">Data format and types</h1>
+<h2 id="dates">Dates</h2>
+<h3 id="format">Format <code>YYYYMMDD</code></h3>
+<p>The format standard <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> represents a date according to 3 components:</p>
+<ul>
+<li>Year (<code>YYYY</code>) in 4 digits: <code>1988</code></li>
+<li>Month (<code>MM</code>) in 2 digits : <code>07</code></li>
+<li>day (<code>DD</code>) in 2 digits : <code>08</code></li>
+</ul>
+<p>Example : <code>19880708</code> : 8 July 1988</p>
+<h3 id="format-1">Format <code>YYYYMMDDhhmmss</code></h3>
+<p>This format adds the time to the previous format and it uses 3 additional components</p>
+<ul>
+<li>Hour (<code>hh</code>) in 2 digits : <code>23</code></li>
+<li>Minute (<code>mm</code>) in 2 digits : <code>59</code></li>
+<li>Seconds (<code>ss</code>) in 2 digits : <code>59</code></li>
+</ul>
+<p>Example : <code>20220708235959</code> : 8 July 1988 23:59:59</p>
+<h2 id="phone-numbers">Phone numbers</h2>
+<p>Telephone numbers must be entered in <a href="https://fr.wikipedia.org/wiki/Plan_de_num%C3%A9rotation">international format</a>, with a prefix for the <a href="https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_internationaux_par_pays">country code</a>. </p>
+<p>For France, the traditional <code>0</code> one found at the beginning of the number is replaced by the code  <code>+33</code>.</p>
+<p>Examples for French numbers:</p>
+<ul>
+<li><code>0123456789</code> : <code>+33123456789</code></li>
+<li><code>0612345789</code> : <code>+33612345789</code></li>
+</ul>
+<h2 id="json">JSON</h2>
+<p>Fields in JSON format must be escaped in order to be correctly interpreted when reading the CSV format file.</p>
+<p>To do this, it is recommended to surround them with double quotes <code>(")</code>, and to double the double quotes already present in the JSON.
+Examples :</p>
+<ul>
+<li><code>{"key": "value"}</code> devient <code>"{""key"": ""value""}"</code> </li>
+<li><code>[{"line":{"is":["LA","LB","LC"]}}]</code> devient <code>"[{""line"":{""is"":[""LA"",""LB"",""LC""]}}]"</code></li>
+</ul>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
+                                </p>
+                            </div>
+                                                GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
+                        Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="http://ubitransports.github.io/gpfs/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>

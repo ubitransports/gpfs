@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPFS Reference</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="http://ubitransports.github.io/gpfs/" class="fa fa-users"> GPFS Reference</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/index.html">
+                                EN
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/fr/reference.html">
+                                FR
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/changelog.html">
+                                Changelog
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="http://ubitransports.github.io/gpfs/">GPFS Reference</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h1 id="passenger_ticketsexttxt">passenger_tickets.ext.txt</h1>
+<p>This file defines the transport tickets associated to users declared in <a href="passengers.txt.html">passengers.txt</a> file. The accounting concept can be entered in an extension file passenger_tickets.ext.txt .</p>
+<h2 id="description-des-colonnes">Description des colonnes</h2>
+<table>
+<thead>
+<tr>
+<th>Nom du champ</th>
+<th style="text-align: center;">Obligatoire</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Identifiant du titre de transport référencé.</td>
+</tr>
+<tr>
+<td>price</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Prix TTC du titre en centimes.</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Montant déjà perçu en centimes.</td>
+</tr>
+<tr>
+<td>payment_detail</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Permet d'ajouter un commentaire au réglement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="format-du-champ">Format du champ <code>payment_detail</code></h3>
+<p>Afin de respecter le format CSV, il faut échapper les éventuelles virgules en mettant l'ensemble du champ entre double quotes (<code>"</code>).</p>
+<p>Ex: </p>
+<pre><code>ticket_id,price,amount,payment_detail
+T0000001,1000,500,"Paiement de 5€ par chèque, à encaisser en Avril"</code></pre>
+<h2 id="exemple-">Exemple :</h2>
+<pre><code>ticket_id,price,amount,payment_detail
+T0000001,1000,500,"Paiement de 5€ par chèque"</code></pre>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
+                                </p>
+                            </div>
+                                                GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
+                        Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="http://ubitransports.github.io/gpfs/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>

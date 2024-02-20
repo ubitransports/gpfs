@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPFS Reference</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="http://ubitransports.github.io/gpfs/css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+</head>
+<body class="wy-body-for-nav">
+
+    <div class="wy-grid-for-nav">
+
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+            <div class="wy-side-nav-search">
+                <a href="http://ubitransports.github.io/gpfs/" class="fa fa-users"> GPFS Reference</a>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/index.html">
+                                EN
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 current">
+                            <a class="reference internal current"
+                               href="http://ubitransports.github.io/gpfs/fr/reference.html">
+                                FR
+                            </a>
+                        </li>
+                                            <li class="toctree-l1 ">
+                            <a class="reference internal "
+                               href="http://ubitransports.github.io/gpfs/changelog.html">
+                                Changelog
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                        <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="http://ubitransports.github.io/gpfs/">GPFS Reference</a>
+            </nav>
+
+
+                        <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="main" class="document">
+                        <h1 id="rfrence-du-standard-gpfs-general-passenger-feed-specification">Référence du standard GPFS (General Passenger Feed Specification)</h1>
+<p>Le <strong>GPFS</strong> est un standard d'échange de données usagers dans un cadre d'<strong>interoperabilité</strong> des réseaux de transport.
+Cette norme a été mise en place afin de simplifier la <strong>transmission des informations usagers</strong> entre les différents
+acteurs du transport comme le fait le <strong>GTFS</strong> pour les données de topologie de réseau.</p>
+<p>Cette documentation décrit les caractéristiques du standard GPFS.</p>
+<h2 id="liste-des-fichiersdossiers">Liste des fichiers/dossiers</h2>
+<p>Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP.</p>
+<table>
+<thead>
+<tr>
+<th>Nom du fichier</th>
+<th style="text-align: center;">Obligatoire</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="passengers.txt.html">passengers.txt</a></td>
+<td style="text-align: center;"><strong>Obligatoire</strong></td>
+<td>Informations concernant les usagers pouvant utiliser le réseau de transport.</td>
+</tr>
+<tr>
+<td><a href="passenger_comments.txt.html">passenger_comments.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Commentaires additionnels associés à un usager.</td>
+</tr>
+<tr>
+<td><a href="passenger_tutors.txt.html">passenger_tutors.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Informations concernant le responsable légal d'un usager.</td>
+</tr>
+<tr>
+<td><a href="passenger_tags.txt.html">passenger_tags.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Définition des cartes associées à un usager.</td>
+</tr>
+<tr>
+<td><a href="passenger_tickets.txt.html">passenger_tickets.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Titres de transport (tickets ou abonnements) attribués à un usager.</td>
+</tr>
+<tr>
+<td><a href="profiles.txt.html">profiles.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Définition des profils usager.</td>
+</tr>
+<tr>
+<td><a href="passenger_profiles.txt.html">passenger_profiles.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Association entre un profil et un usager.</td>
+</tr>
+<tr>
+<td><a href="schools.txt.html">schools.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Informations concernant les établissements scolaires fréquentés par un usager.</td>
+</tr>
+<tr>
+<td><a href="passenger_schools.txt.html">passenger_schools.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Association d'un établissement scolaire à un usager.</td>
+</tr>
+<tr>
+<td><a href="bookings.txt.html">bookings.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Les réservations associées aux usagers.</td>
+</tr>
+<tr>
+<td><a href="calendars.txt.html">calendars.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Informations concernant les calendriers de fonctionnement.</td>
+</tr>
+<tr>
+<td><a href="calendar_dates.txt.html">calendar_dates.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Informations concernant les dates à inclure ou exclure d'un calendrier.</td>
+</tr>
+<tr>
+<td><a href="passenger_organizations.txt.html">passenger_organization.txt</a></td>
+<td style="text-align: center;">Optionnel</td>
+<td>Association d'une (ou des) Autorité(s) Organisatrice(s) à un usager</td>
+</tr>
+<tr>
+<td>pictures/</td>
+<td style="text-align: center;">Optionnel</td>
+<td>Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prrequis">Prérequis</h2>
+<p>Les prérequis suivants s'appliquent au format et contenu des fichiers :</p>
+<ul>
+<li>Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.</li>
+<li>Les noms de fichiers sont sensibles à la casse.</li>
+<li>La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non
+utilisé, la colonne peut être omise.</li>
+<li>Tous les noms de champs sont sensibles à la casse.</li>
+<li>Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.</li>
+<li>Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.</li>
+<li>Les fichiers doivent être encodés en UTF-8.</li>
+<li>Les fichiers doivent être contenus dans un dossier compressé au format ZIP.</li>
+<li>L'ordre des lignes dans chaque fichier n'a pas d'importance</li>
+</ul>
+<h2 id="types">Types</h2>
+<p>Ceci est une liste avec les <a href="types.html">types</a> utilisés.</p>
+                    </div>
+
+                    <footer>
+                        <hr/>
+                                                    <div role="contentinfo">
+                                <p>
+                                    Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
+                                </p>
+                            </div>
+                                                GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
+                        Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
+                    </footer>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="http://ubitransports.github.io/gpfs/js/theme.js"></script>
+
+    <script>
+        $(function() {
+            // Syntax highlighting
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+</body>
+</html>
