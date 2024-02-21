@@ -1,5 +1,5 @@
 ---
-currentMenu: calendars.txt
+currentMenu: index
 ---
 
 # calendars.txt

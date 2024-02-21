@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_comments.txt
+currentMenu: index
 ---
 
 # passenger_comments.txt

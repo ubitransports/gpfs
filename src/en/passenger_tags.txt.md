@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_tags.txt
+currentMenu: index
 ---
 
 # passenger_tags.txt

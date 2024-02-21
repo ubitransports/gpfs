@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_tickets.txt
+currentMenu: index
 ---
 
 # passenger_tickets.txt
@@ -12,11 +12,11 @@ This file defines the transport tickets associated to users declared in the  [pa
 |-------------------------|:---------------:|-----------------------------------------------------------------------------------------|
 | ticket_id               | **Mandatory** | Unique identifier of the transport ticket.                                              |
 | passenger_id            | **Mandatory** | Identifier of the referenced user.                                                      |
-| fare_id                 |  Optionnel      | Identifier of the fare linked to this transport ticket.                                 |
-| ticket_start_on         |  Optionnel      | Start date of validity of the title in format [YYYYMMDDhhmmss](types.html#Dates).       |
-| ticket_end_on           |  Optionnel      | End of validity date of the title in format [YYYYMMDDhhmmss](types.html#Dates).         |
-| restrictions            |  Optionnel      | Restrictions on the use of the title (line, way etc.) in [format JSON](types.html#JSON) |
-| unboarding_restrictions |  Optionnel      | Restrictions of the unboarding in [format JSON](types.html#JSON)                        |
+| fare_id                 |  Optional      | Identifier of the fare linked to this transport ticket.                                 |
+| ticket_start_on         |  Optional      | Start date of validity of the title in format [YYYYMMDDhhmmss](types.html#Dates).       |
+| ticket_end_on           |  Optional      | End of validity date of the title in format [YYYYMMDDhhmmss](types.html#Dates).         |
+| restrictions            |  Optional      | Restrictions on the use of the title (line, way etc.) in [format JSON](types.html#JSON) |
+| unboarding_restrictions |  Optional      | Restrictions of the unboarding in [format JSON](types.html#JSON)                        |
 
 ## Example:
 ```

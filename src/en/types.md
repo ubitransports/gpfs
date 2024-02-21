@@ -1,5 +1,5 @@
 ---
-currentMenu: types
+currentMenu: index
 ---
 
 # Data format and types

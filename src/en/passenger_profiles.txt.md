@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_profiles.txt
+currentMenu: index
 ---
 
 # passenger_profiles.txt

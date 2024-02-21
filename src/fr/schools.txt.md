@@ -1,5 +1,5 @@
 ---
-currentMenu: schools.txt
+currentMenu: reference
 ---
 
 # schools.txt

@@ -1,5 +1,5 @@
 ---
-currentMenu: types
+currentMenu: reference
 ---
 
 # Format et types de données

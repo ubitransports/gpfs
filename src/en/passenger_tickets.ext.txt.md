@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_tickets.ext.txt
+currentMenu: index
 ---
 
 # passenger_tickets.ext.txt

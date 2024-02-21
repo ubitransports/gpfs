@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_schools.txt
+currentMenu: index
 ---
 
 # passenger_schools.txt

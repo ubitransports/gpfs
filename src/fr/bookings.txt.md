@@ -1,5 +1,5 @@
 ---
-currentMenu: bookings.txt
+currentMenu: reference
 ---
 
 # bookings.txt

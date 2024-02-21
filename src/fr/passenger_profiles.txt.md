@@ -1,5 +1,5 @@
 ---
-currentMenu: passenger_profiles.txt
+currentMenu: reference
 ---
 
 # passenger_profiles.txt
