@@ -37,5 +37,5 @@ Par défaut tous les jours sont inactifs (`0000000`)
 ## Exemple
 ```
 school_id,school_name,school_shortname,school_address_1,school_address_2,school_address_3,school_address_zipcode,school_address_city,school_address_country,school_email,school_lat,school_lon,school_open_on
-SCHOOL1,Lycée PSS,PSS,1 rue de la mairie,,,71000,Mâcon,France,lycee.pss@gmail.com,4.8313,46.3062,1111100
+SCHOOL1,Lycée PSS,PSS,1 rue de la mairie,,,71000,Mâcon,France,lycee.pss@gmail.com,46.3062,4.8313,1111100
 ```
