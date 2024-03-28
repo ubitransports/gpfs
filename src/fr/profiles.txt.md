@@ -1,5 +1,5 @@
 ---
-currentMenu: profiles.txt
+currentMenu: reference
 ---
 
 # profiles.txt
