@@ -1,5 +1,5 @@
 ---
-currentMenu: calendar_dates.txt
+currentMenu: reference
 ---
 
 # calendar_dates.txt

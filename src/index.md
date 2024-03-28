@@ -2,46 +2,50 @@
 currentMenu: index
 ---
 
-# Référence du standard GPFS (General Passenger Feed Specification)
+# Overview of GPFS standard (General Passenger Feed Specification)
 
-Le **GPFS** est un standard d'échange de données usagers dans un cadre d'**interoperabilité** des réseaux de transport.
-Cette norme a été mise en place afin de simplifier la **transmission des informations usagers** entre les différents
-acteurs du transport comme le fait le **GTFS** pour les données de topologie de réseau.
+GPFS is a standard for exchanging user data within a framework of interoperability of transport networks.
+This standard was put in place to simplify the transmission of user information between the different transport players,
+as does the GTFS for network topology data.
 
-Cette documentation décrit les caractéristiques du standard GPFS.
+This documentation describes the characteristics of the GPFS standard.
 
-## Liste des fichiers/dossiers
+## List of files
 
-Liste des fichiers et dossiers contenus dans un flux GPFS, qui est un dossier compressé au format ZIP.
+List of files and folders contained in a GPFS stream, which is a folder compressed in ZIP format.
 
-| Nom du fichier                                        |   Obligatoire   | Description                                                                                                                   |
-|-------------------------------------------------------|:---------------:|-------------------------------------------------------------------------------------------------------------------------------|
-| [passengers.txt](passengers.txt.html)                 | **Obligatoire** | Informations concernant les usagers pouvant utiliser le réseau de transport.                                                  |
-| [passenger_comments.txt](passenger_comments.txt.html) | Optionnel       | Commentaires additionnels associés à un usager.                                                                               |
-| [passenger_tutors.txt](passenger_tutors.txt.html)     | Optionnel       | Informations concernant le responsable légal d'un usager.                                                                     |
-| [passenger_tags.txt](passenger_tags.txt.html)         | Optionnel       | Définition des cartes associées à un usager.                                                                                  |
-| [passenger_tickets.txt](passenger_tickets.txt.html)   | Optionnel       | Titres de transport (tickets ou abonnements) attribués à un usager.                                                           |
-| [profiles.txt](profiles.txt.html)                     | Optionnel       | Définition des profils usager.                                                                                                |
-| [passenger_profiles.txt](passenger_profiles.txt.html) | Optionnel       | Association entre un profil et un usager.                                                                                     |
-| [schools.txt](schools.txt.html)                       | Optionnel       | Informations concernant les établissements scolaires fréquentés par un usager.                                                |
-| [passenger_schools.txt](passenger_schools.txt.html)   | Optionnel       | Association d'un établissement scolaire à un usager.                                                                          |
-| [bookings.txt](bookings.txt.html)                     | Optionnel       | Les réservations associées aux usagers.                                                                                       |
-| [calendars.txt](calendars.txt.html)                   | Optionnel       | Informations concernant les calendriers de fonctionnement.                                                                    |
-| [calendar_dates.txt](calendar_dates.txt.html)         | Optionnel       | Informations concernant les dates à inclure ou exclure d'un calendrier.                                                       |
-| [passenger_organization.txt](passenger_organizations.txt.html)   | Optionnel       | Association d'une (ou des) Autorité(s) Organisatrice(s) à un usager                                                                         |
-| pictures/                                             | Optionnel       | Dossier contenant les photos des usagers. Le nom de la photo doit correspondre à celui défini dans le fichier passengers.txt. |
+| Filename                                                          |    Mandatory    | Description                                                                                          |
+|-------------------------------------------------------------------|:---------------:|------------------------------------------------------------------------------------------------------|
+| [passengers.txt](en/passengers.txt.html)                          | **Mandatory** | 	Information concerning users who can use the transport network.                                     |
+| [passenger_comments.txt](en/passenger_comments.txt.html)          |    Optional    | Comments associated to users.                                                                        |
+| [passenger_tutors.txt](en/passenger_tutors.txt.html)              |    Optional    | Information concerning passengers' tutor.                                                            |
+| [passenger_tags.txt](en/passenger_tags.txt.html)                  |    Optional    | Definition of the passeners' tags.                                                                   |
+| [passenger_tickets.txt](en/passenger_tickets.txt.html)            |    Optional    | Transport tickets (tickets or subscriptions) associated to a passenger.                              |
+| [profiles.txt](en/profiles.txt.html)                              |    Optional    | Passenger profiles.                                                                                  |
+| [passenger_profiles.txt](en/passenger_profiles.txt.html)          |    Optional    | Association between a profile and a user.                                                            |
+| [schools.txt](en/schools.txt.html)                                |    Optional    | Information concerning school data.                                                                  |
+| [passenger_schools.txt](en/passenger_schools.txt.html)            |    Optional    | Association between schools and passengers.                                                          |
+| [bookings.txt](en/bookings.txt.html)                              |    Optional    | Reservations associated with users.                                                                  |
+| [calendars.txt](en/calendars.txt.html)                            |    Optional    | Information regarding operating schedules.                                                           |
+| [calendar_dates.txt](en/calendar_dates.txt.html)                  |    Optional    | Information about dates to include or exclude from a calendar.                                       |
+| [passenger_organization.txt](en/passenger_organizations.txt.html) |    Optional    | Association of one (or more) Organizing Authority(ies) to a user.                                    |
+| pictures/                                                         |    Optional    | File containing users’ photos. The photo name must match the one defined in the passengers.txt file. |
 
-## Prérequis
+## Requirements
 
-Les prérequis suivants s'appliquent au format et contenu des fichiers :
+The following prerequisites apply to file format and content:
 
-* Tous les fichiers d'un GPFS doivent être enregistrés au format TXT et leurs valeurs seront séparées par des virgules.
-* Les noms de fichiers sont sensibles à la casse.
-* La première ligne de chaque fichier doit contenir les noms des colonnes utilisées. Si un champ est optionnel et non
-  utilisé, la colonne peut être omise.
-* Tous les noms de champs sont sensibles à la casse.
-* Les valeurs ne doivent contenir ni tabulation, ni retour à la ligne.
-* Le nom des champs et les valeurs ne doivent pas avoir d'espace avant et après.
-* Les fichiers doivent être encodés en UTF-8.
-* Les fichiers doivent être contenus dans un dossier compressé au format ZIP.
-* L'ordre des lignes dans chaque fichier n'a pas d'importance
+* All files in a GPFS must be saved in TXT format and their values ​​will be separated by commas.
+* File names are case sensitive.
+* The first line of each file must contain the names of the columns used. If a field is Optional and not used, the column can be omitted.
+* All field names are case sensitive.
+* Values must not contain tabs or newlines.
+* Field names and values must not have spaces before and after them.
+* Files must be encoded in UTF-8.
+* Files must be contained in a compressed folder in ZIP format.
+* The order of lines in each file does not matter.
+
+
+## Types
+
+This is a list with the used [types](en/types.md).

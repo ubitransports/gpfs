@@ -6,6 +6,10 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 20 February 2024
+
+* Translated pages in English.
+
 ## 4 Janvier 2023
 
 * Ajout de la relation usagers et autorités organisatrice avec le fichier [passenger_organizations.txt](passenger_organizations.txt.html)

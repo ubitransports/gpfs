@@ -1,5 +1,5 @@
 ---
-currentMenu: bookings.txt
+currentMenu: reference
 ---
 
 # bookings.txt
@@ -18,14 +18,14 @@ Ce fichier contient les réservations associées aux usagers définis dans le fi
 | start_date                | optionnel       | Date de début de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | end_date                  | optionnel       | Date de fin de validité de la réservation au format [YYYYMMDD](types.html#Dates). |
 | days                      | optionnel       | Jours de fonctionnement de la réservation au format binaire sur 7 caractères. Voir exemples ci-dessous. |
-| calendar_id               | optionnel       | Identifiant unique du calendrier de fonctionnement défini dans le fichier [calendars.txt](calendars.txt). |
+| calendar_id               | optionnel       | Identifiant unique du calendrier de fonctionnement défini dans le fichier [calendars.txt](calendars.txt.md). |
 
 ### Période de validité
 
 La période de validité d'une réservation doit être définie de l'une des deux manières suivantes :
 
 * Via les champs start_date, end_date et days
-* Via le champ `calendar_id` qui sera en lien avec le fichier [calendars.txt](calendars.txt).
+* Via le champ `calendar_id` qui sera en lien avec le fichier [calendars.txt](calendars.txt.md).
 
 Si le champs `calendar_id` est renseigné, il sera pris en priorité pour définir la période de validité
 

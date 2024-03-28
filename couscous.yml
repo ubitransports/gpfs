@@ -1,6 +1,6 @@
 title: GPFS Reference
 subTitle: General Passenger Feed Specification Reference
-baseUrl: http://ubitransports.github.io/gpfs
+baseUrl: https://ubitransports.github.io/gpfs
 
 github:
     user: ubitransports
@@ -16,51 +16,58 @@ template:
 menu:
     items:
         index:
-            text: Référence
+            text: EN
             relativeUrl: index.html
-        types:
-            text: Types
-            relativeUrl: types.html
+            childItems:
+                passengers.txt:
+                    text: passengers.txt
+                    relativeUrl: en/passengers.txt.html
+        reference:
+            text: FR
+            relativeUrl: fr/reference.html
         revision:
             text: Changelog
-            relativeUrl: revision.html
-        separator:
-        passengers.txt:
-            text: passengers.txt
-            relativeUrl: passengers.txt.html
-        passenger_comments.txt:
-            text: passenger_comments.txt
-            relativeUrl: passenger_comments.txt.html
-        passenger_tutors.txt:
-            text: passenger_tutors.txt
-            relativeUrl: passenger_tutors.txt.html
-        passenger_tags.txt:
-            text: passenger_tags.txt
-            relativeUrl: passenger_tags.txt.html
-        passenger_tickets.txt:
-            text: passenger_tickets.txt
-            relativeUrl: passenger_tickets.txt.html
-        profiles.txt:
-            text: profiles.txt
-            relativeUrl: profiles.txt.html
-        passenger_profiles.txt:
-            text: passenger_profiles.txt
-            relativeUrl: passenger_profiles.txt.html
-        schools.txt:
-            text: schools.txt
-            relativeUrl: schools.txt.html
-        passenger_schools.txt:
-            text: passenger_schools.txt
-            relativeUrl: passenger_schools.txt.html
-        bookings.txt:
-            text: bookings.txt
-            relativeUrl: bookings.txt.html
-        calendars.txt:
-            text: calendars.txt
-            relativeUrl: calendars.txt.html
-        calendar_dates.txt:
-            text: calendar_dates.txt
-            relativeUrl: calendar_dates.txt.html
-        passenger_organizations.txt:
-            text: passenger_organizations.txt
-            relativeUrl: passenger_organizations.txt.html
+            relativeUrl: changelog.html
+#        separator:
+#        passengers.txt:
+#            text: passengers.txt
+#            relativeUrl: en/passengers.txt.html
+#        passenger_comments.txt:
+#            text: passenger_comments.txt
+#            relativeUrl: en/passenger_comments.txt.html
+#        passenger_tutors.txt:
+#            text: passenger_tutors.txt
+#            relativeUrl: en/passenger_tutors.txt.html
+#        passenger_tags.txt:
+#            text: passenger_tags.txt
+#            relativeUrl: en/passenger_tags.txt.html
+#        passenger_tickets.txt:
+#            text: passenger_tickets.txt
+#            relativeUrl: en/passenger_tickets.txt.html
+#        profiles.txt:
+#            text: profiles.txt
+#            relativeUrl: en/profiles.txt.html
+#        passenger_profiles.txt:
+#            text: passenger_profiles.txt
+#            relativeUrl: en/passenger_profiles.txt.html
+#        schools.txt:
+#            text: schools.txt
+#            relativeUrl: en/schools.txt.html
+#        passenger_schools.txt:
+#            text: passenger_schools.txt
+#            relativeUrl: en/passenger_schools.txt.html
+#        bookings.txt:
+#            text: bookings.txt
+#            relativeUrl: en/bookings.txt.html
+#        calendars.txt:
+#            text: calendars.txt
+#            relativeUrl: en/calendars.txt.html
+#        calendar_dates.txt:
+#            text: calendar_dates.txt
+#            relativeUrl: en/calendar_dates.txt.html
+#        passenger_organizations.txt:
+#            text: passenger_organizations.txt
+#            relativeUrl: en/passenger_organizations.txt.html
+#        types:
+#            text: Types
+#            relativeUrl: en/types.html
