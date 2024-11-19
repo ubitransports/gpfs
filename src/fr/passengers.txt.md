@@ -29,6 +29,7 @@ Ce fichier contient les informations concernant les usagers pouvant utiliser le 
 | passenger_address_city    |  Optionnel       |  **255** |  Ville d'habitation de l'usager |
 | passenger_address_country |  Optionnel       |  **255** |  Pays d'habitation de l'usager |
 | passenger_picture_name    |  Optionnel       |   -  |  Nom de l'image à associer au profil de l'usager avec son extension. Exemple: `1235235.jpg` |
+| passenger_anonymous       |  Optionnel       |   -  |  true ou false. Si true, les champs firstname, lastname, email, address, date of birth ne sont pas obligatoires. Si false, les champs firstname, lastname, date of birth sont obligatoires. Si vide ou inexistant, alors false est la valeur par défaut |
 | additional_data           |  Optionnel       |   -  |  Données complémentaires liées à l'usager, au [format JSON](types.html#JSON)  |
 
 ### Prise en charge des images
@@ -45,6 +46,6 @@ Le contenu de la cle et de la valeur doit être une chaine de **caractères alph
 
 ## Exemple :
 ```
-passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,additional_data
-P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,,71000,Mâcon,France,"","{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"
+passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,passenger_anonymous,additional_data
+P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,,71000,Mâcon,France,"",false,"{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"
 ```
