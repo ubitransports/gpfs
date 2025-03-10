@@ -174,6 +174,12 @@
 <td>Nom de l'image à associer au profil de l'usager avec son extension. Exemple: <code>1235235.jpg</code></td>
 </tr>
 <tr>
+<td>passenger_anonymous</td>
+<td style="text-align: center;">Optionnel</td>
+<td>-</td>
+<td>true ou false. Si true, les champs firstname, lastname, email, address, date of birth ne sont pas obligatoires. Si false, les champs firstname, lastname, date of birth sont obligatoires. Si vide ou inexistant, alors false est la valeur par défaut</td>
+</tr>
+<tr>
 <td>additional_data</td>
 <td style="text-align: center;">Optionnel</td>
 <td>-</td>
@@ -188,8 +194,8 @@
 Le contenu de la cle et de la valeur doit être une chaine de <strong>caractères alphanumériques</strong>.</p>
 <pre><code>"{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
 <h2 id="exemple-">Exemple :</h2>
-<pre><code>passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,additional_data
-P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,,71000,Mâcon,France,"","{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
+<pre><code>passenger_id,passenger_file_number,passenger_firstname,passenger_lastname,passenger_gender_title,passenger_dateofbirth,passenger_gender,passenger_email,passenger_mobile_phone,passenger_home_phone,passenger_address_1,passenger_address_2,passenger_address_3,passenger_address_zipcode,passenger_address_city,passenger_address_country,passenger_picture_name,passenger_anonymous,additional_data
+P1,P0000001,John,Doe,M,19900331,1,john.doe@gmail.com,,,200 Bd de la resistance,,,71000,Mâcon,France,"",false,"{""cle1"":""valeur1"",""cle2"":""valeur2"",""cle3"":""valeur3""}"</code></pre>
                     </div>
 
                     <footer>
