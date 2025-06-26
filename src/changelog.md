@@ -6,6 +6,14 @@ currentMenu: revision
 
 Ci-dessous la liste des évolutions du GPFS.
 
+## 26 June 2025
+
+* Adding fare_commercial_support_id in passengers_tags.txt
+
+## 16 January 2025
+
+* Adding passenger_anonymous in passengers.txt
+
 ## 20 February 2024
 
 * Translated pages in English.

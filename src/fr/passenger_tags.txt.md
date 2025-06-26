@@ -8,16 +8,17 @@ Ce fichier contient les informations sur les cartes des usagers.
 
 ## Description des colonnes
 
-| Nom du champ           |  Obligatoire    |  Longueur max |  Description |
-|------------------------|:------------:|------|----------|
-| tag_id                 | **Obligatoire** |   -  |  Identifiant unique de la carte. |
-| passenger_id           | **Obligatoire** |   -  |  Identifie l'usager qui détient cette carte. Ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
-| uid                    | **Obligatoire** |  **255** |  Identifiant physique de la carte. Il doit être unique. |
-| uid_format             | optionnel       |   -  |  Indique si la valeur du champ uid est au format hexadécimal ou décimal|
-| delivery_date          | optionnel       |   -  |  Date de remise de la carte au format [YYYYMMDD](types.html#Dates).|
-| validity_end           | optionnel       |   -  |  Date prévisionnelle de fin de validité de la carte au format [YYYYMMDD](types.html#Dates).|
-| disabled_date          | optionnel       |   -  |  Date effective de désactivation de la carte au format [YYYYMMDD](types.html#Dates).|
-| disabled_cause         | optionnel       |   -  |  Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas. |
+| Nom du champ               |   Obligatoire   | Longueur max | Description                                                                                                            |
+|----------------------------|:---------------:|--------------|------------------------------------------------------------------------------------------------------------------------|
+| tag_id                     | **Obligatoire** | -            | Identifiant unique de la carte.                                                                                        |
+| passenger_id               | **Obligatoire** | -            | Identifie l'usager qui détient cette carte. Ce champ est défini dans le fichier [passengers.txt](passengers.txt.html). |
+| uid                        | **Obligatoire** | **255**      | Identifiant physique de la carte. Il doit être unique.                                                                 |
+| uid_format                 |    optionnel    | -            | Indique si la valeur du champ uid est au format hexadécimal ou décimal                                                 |
+| delivery_date              |    optionnel    | -            | Date de remise de la carte au format [YYYYMMDD](types.html#Dates).                                                     |
+| validity_end               |    optionnel    | -            | Date prévisionnelle de fin de validité de la carte au format [YYYYMMDD](types.html#Dates).                             |
+| disabled_date              |    optionnel    | -            | Date effective de désactivation de la carte au format [YYYYMMDD](types.html#Dates).                                    |
+| disabled_cause             |    optionnel    | -            | Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas.                                     |
+| fare_commercial_support_id |    optionnel    | -            | Identifie le type de support commercial                                                                                |
 
 
 ### Valeurs du champ "uid_format" :
@@ -37,8 +38,8 @@ Ce fichier contient les informations sur les cartes des usagers.
 
 ## Exemple
 ```
-tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause
-1,1,0123456789ABCDEF,HEX,,,,
-2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN
+tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause,fare_commercial_support_id
+1,1,0123456789ABCDEF,HEX,,,,,carte-du-reseau
+2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN,carte-du-reseau
 
 ```
