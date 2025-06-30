@@ -118,6 +118,12 @@
 <td>-</td>
 <td>Indication sur les raisons de la désactivation. Valeurs acceptées : voir plus bas.</td>
 </tr>
+<tr>
+<td>fare_commercial_support_id</td>
+<td style="text-align: center;">optionnel</td>
+<td>-</td>
+<td>Identifie le type de support commercial</td>
+</tr>
 </tbody>
 </table>
 <h3 id="valeurs-du-champ-quotuid_formatquot-">Valeurs du champ &quot;uid_format&quot; :</h3>
@@ -135,9 +141,9 @@
 <li><strong>OTHER</strong>          : <em>motif indéterminé</em>.</li>
 </ul>
 <h2 id="exemple">Exemple</h2>
-<pre><code>tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause
-1,1,0123456789ABCDEF,HEX,,,,
-2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN
+<pre><code>tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause,fare_commercial_support_id
+1,1,0123456789ABCDEF,HEX,,,,,carte-du-reseau
+2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN,carte-du-reseau
 </code></pre>
                     </div>
 

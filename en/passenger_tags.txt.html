@@ -118,6 +118,12 @@
 <td>-</td>
 <td>Indication of the reasons for deactivation. Accepted values: see below.</td>
 </tr>
+<tr>
+<td>fare_commercial_support_id</td>
+<td style="text-align: center;">optional</td>
+<td>-</td>
+<td>Identifies the commercial support type</td>
+</tr>
 </tbody>
 </table>
 <h3 id="values-of-the-quotuid_formatquot-field">Values of the &quot;uid_format&quot; field:</h3>
@@ -136,8 +142,8 @@
 </ul>
 <h2 id="example">Example</h2>
 <pre><code>tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause
-1,1,0123456789ABCDEF,HEX,,,,
-2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN
+1,1,0123456789ABCDEF,HEX,,,,,carte-du-reseau
+2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN,carte-du-reseau
 </code></pre>
                     </div>
 
