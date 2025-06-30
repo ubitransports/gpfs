@@ -38,7 +38,7 @@ This file contains information on user cards.
 
 ## Example
 ```
-tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause
+tag_id,passenger_id,uid,uid_format,delivery_date,validity_end,disabled_date,disabled_cause,fare_commercial_support_id
 1,1,0123456789ABCDEF,HEX,,,,,carte-du-reseau
 2,2,0123456789101010,DEC,20170101,20171231,20170208,STOLEN,carte-du-reseau
 
