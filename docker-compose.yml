@@ -1,0 +1,18 @@
+services:
+    php_gpfs:
+        image: europe-west1-docker.pkg.dev/ubitransport-tools/docker-ubi-eng/php_2cloud:8.3-dev
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.php-2cloud.rule=Host(`gpfs.wandev`)
+            - traefik.http.services.php-2cloud.loadbalancer.server.port=80
+            - traefik.docker.network=web-proxy
+
+        networks:
+            web-proxy: ~
+            app: ~
+
+networks:
+    app:
+        internal: true
+    web-proxy:
+        external: true
