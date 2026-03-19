@@ -13,10 +13,7 @@ services:
 
         networks:
             web-proxy: ~
-            app: ~
 
 networks:
-    app:
-        internal: true
     web-proxy:
         external: true
