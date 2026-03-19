@@ -1,10 +1,14 @@
 services:
     php_gpfs:
         image: europe-west1-docker.pkg.dev/ubitransport-tools/docker-ubi-eng/php_2cloud:8.3-dev
+        volumes:
+            - .:/var/www/html
+        working_dir: /var/www/html
+        command: sh -c "composer install && php vendor/couscous/couscous/bin/couscous preview 0.0.0.0:80"
         labels:
             - traefik.enable=true
-            - traefik.http.routers.php-2cloud.rule=Host(`gpfs.wandev`)
-            - traefik.http.services.php-2cloud.loadbalancer.server.port=80
+            - traefik.http.routers.php_gpfs.rule=Host(`gpfs.wandev`)
+            - traefik.http.services.php_gpfs.loadbalancer.server.port=80
             - traefik.docker.network=web-proxy
 
         networks:
