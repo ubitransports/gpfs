@@ -23,8 +23,8 @@ For a new file:
 
 To be able to validate locally the modification, run this two commands :
 
-    $ composer install
-    $ php vendor/couscous/couscous/bin/couscous preview 
+    $ make start
+    $ make add-host
 
 you can go to the url display on the prompt. 
 If you want to use a specific adress/port, add it to the last command.
