@@ -4,54 +4,58 @@ currentMenu: revision
 
 # Changelog
 
-Ci-dessous la liste des évolutions du GPFS.
+Below is the list of GPFS evolutions.
+
+## 16 September 2026
+
+* Added OD details for restrictions in passenger_tickets.txt
 
 ## 26 June 2025
 
-* Adding fare_commercial_support_id in passengers_tags.txt
+* Added fare_commercial_support_id in passenger_tags.txt
 
 ## 16 January 2025
 
-* Adding passenger_anonymous in passengers.txt
+* Added passenger_anonymous in passengers.txt
 
 ## 20 February 2024
 
-* Translated pages in English.
+* Translated pages to English.
 
-## 4 Janvier 2023
+## 4 January 2023
 
-* Ajout de la relation usagers et autorités organisatrice avec le fichier [passenger_organizations.txt](passenger_organizations.txt.html)
+* Added user and organizing authority relationship with the file [passenger_organizations.txt](passenger_organizations.txt.html)
 
-## 28 Avril 2020
+## 28 April 2020
 
-* Ajout du champ `unboarding_restrictions` dans le fichier [passenger_tickets.txt](passenger_tickets.txt.html).
+* Added the `unboarding_restrictions` field in the file [passenger_tickets.txt](passenger_tickets.txt.html).
 
-## 17 Janvier 2020
+## 17 January 2020
 
-* Ajout du champ additional_data dans le fichier [passengers.txt](passengers.txt.html).
+* Added the `additional_data` field in the file [passengers.txt](passengers.txt.html).
 
-## 11 Mars 2019
+## 11 March 2019
 
-* Ajout d'explications sur les types et les formats des différents champs.
-* Ajout d'une [page](types.html) dédiée aux types de données.
+* Added explanations on the types and formats of the different fields.
+* Added a dedicated [page](types.html) for data types.
 
-## 29 Octobre 2018
+## 29 October 2018
 
-* Ajout d'explications concernant les restictions d'usage de ticket définies dans le fichier [passenger_tickets.txt](passenger_tickets.txt.html)
+* Added explanations regarding ticket usage restrictions defined in the file [passenger_tickets.txt](passenger_tickets.txt.html)
 
-## 05 Octobre 2018
+## 05 October 2018
 
-* Ajout d'un identifiant unique pour le responsable légal dans le fichier [passenger_tutors.txt](passenger_tutors.txt.html)
+* Added a unique identifier for the legal tutor in the file [passenger_tutors.txt](passenger_tutors.txt.html)
 
-## 29 Juin 2017
+## 29 June 2017
 
-* Ajout des réservations liées aux usagers dans le fichier [bookings.txt](bookings.txt.html)
-* Ajout des calendiers de fonctionnements dans le fichier [calendars.txt](calendars.txt.html) et [calendar_dates.txt](calendar_dates.txt.html)
+* Added user-related bookings in the file [bookings.txt](bookings.txt.html)
+* Added operating calendars in the files [calendars.txt](calendars.txt.html) and [calendar_dates.txt](calendar_dates.txt.html)
 
-## 9 février 2017
+## 9 February 2017
 
-* Ajout des cartes usager dans le fichier [passenger_tags.txt](passenger_tags.txt.html)
+* Added user cards in the file [passenger_tags.txt](passenger_tags.txt.html)
 
-## 14 juin 2016
+## 14 June 2016
 
-* Création du standard GPFS
+* Creation of the GPFS standard
