@@ -113,35 +113,113 @@ T0000001,P1,TU1,20160101000000,20160131235959,"[{""line"":{""is"":[""LA"",""LB""
 <p>Si les champs <code>restrictions</code> et/ou <code>unboarding_restrictions</code> sont remplis, les valeurs définies remplaceront les restrictions mises en place sur le tarif.  </p>
 <p>Il est possible de restreindre les tickets sur un ou plusieurs critères :</p>
 <ul>
-<li><code>network</code> Un réseau de transport (ex: Sur le réseau Scolaire)</li>
-<li><code>line</code> Une ligne (ex: Sur la ligne A ou B)</li>
-<li><code>trip</code> Une course (ex: Sur la course 107-03A9)</li>
-<li><code>stoparea</code> Un arrêt commercial (ex: A l'arrêt &quot;Gare SNCF&quot;)</li>
-<li><code>stoppoint</code> Un arrêt physique (ex: A l'arrêt &quot;Gare SNCF&quot; sens Aller)</li>
-<li><code>zone</code> Une zone tarifaire (ex: Dans la zone tarif &quot;A&quot;)</li>
-<li><code>weekday</code> Un jour de semaine (ex: Du lundi a vendredi)</li>
-<li><code>time</code> Une plage horaire (ex: Entre 12h et 14h)</li>
-<li><code>calendar</code> Un calendrier (ex: En période de vacance scolaire)</li>
+<li><code>network</code> : Un réseau de transport (ex: Sur le réseau Scolaire)</li>
+<li><code>line</code> : Une ligne (ex: Sur la ligne A ou B)</li>
+<li><code>trip</code> : Une course (ex: Sur la course 107-03A9)</li>
+<li><code>stoparea</code> : Un arrêt commercial (ex: A l'arrêt &quot;Gare SNCF&quot;)</li>
+<li><code>stoppoint</code> : Un arrêt physique (ex: A l'arrêt &quot;Gare SNCF&quot; sens Aller)</li>
+<li><code>zone</code> : Une zone tarifaire (ex: Dans la zone tarif &quot;A&quot;)</li>
+<li><code>weekday</code> : Un jour de semaine (ex: Du lundi au vendredi)</li>
+<li><code>time</code> : Une plage horaire (ex: Entre 12h et 14h)</li>
+<li><code>calendar</code> : Un calendrier (ex: En période de vacances scolaires)</li>
+<li><code>company</code> : Un transporteur / opérateur</li>
+<li><code>vehicleType</code> : Un type de véhicule (ex: Pour le type &quot;Tramway&quot;)</li>
+<li><code>od</code> : Une restriction d'Origine / Destination (voir détails ci-dessous)</li>
 </ul>
 <p>Les restrictions d'utilisation de tickets sont gérées au <a href="types.html#JSON">format JSON</a>.</p>
 <p>Une <strong>restriction</strong> est un tableau JSON d'une ou plusieurs règles : <code>[REGLE_A, REGLE_B]</code>
-L'utilisation du ticket est autorisé si au moins une des règles est valide.</p>
+L'utilisation du ticket est autorisée si au moins une des règles est valide.</p>
 <p>Une <strong>règle</strong> est un objet JSON d'un ou plusieurs critères cités ci-dessus : <code>{CRITERE_A:CONDITION_A, CRITERE_B:CONDITION_B}</code>
-La condition est également un objet du type <code>{"is":[REFERENCE_A, REFERENCE_B]}</code> ou <code>{"isnot":[REFERENCE_A, REFERENCE_B]}</code>.</p>
+Chaque critère est un objet contenant :</p>
+<ul>
+<li><code>is</code> : une référence unique ou une liste de références d'objets autorisés (ou une valeur spécifique selon le critère).</li>
+<li><code>isnot</code> : une référence unique ou une liste de références d'objets interdits (ou une valeur spécifique selon le critère).</li>
+<li><code>ignoreIfMissing</code> (optionnel) : un booléen indiquant s'il faut ignorer cette règle si l'information est absente du contexte de validation/vente.</li>
+</ul>
+<p><em>Note : Les références utilisées correspondent aux valeurs <code>ext_ref</code> des objets et non à leurs identifiants de base de données.</em></p>
+<h3 id="spcificits-de-certains-critres">Spécificités de certains critères</h3>
+<ul>
+<li><strong>time</strong> : La valeur est un objet de plage horaire de type <code>"is":{"from": "10:00:00", "to":"18:00:00"}</code></li>
+<li><strong>weekday</strong> : La valeur est une chaîne de 7 caractères binaires <code>[0-1]</code> représentant les jours de la semaine (du lundi au dimanche), par exemple <code>"1111100"</code> pour du lundi au vendredi.</li>
+<li><strong>od</strong> : Permet de restreindre l'utilisation à un trajet d'Origine/Destination spécifique (voir la section dédiée ci-dessous).</li>
+</ul>
 <h3 id="exemples-de-json-de-restrictions">Exemples de JSON de restrictions</h3>
-<p>Note : Pour une raison de lisibilité ces exemples au format JSON ne sont pas échappés (voir ci-dessus)</p>
+<p>Note : Pour une raison de lisibilité ces exemples au format JSON ne sont pas échappés.</p>
 <p>Utilisable sur la ligne LA ou LB ou LC :</p>
-<pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
-<p>Utilisable uniquement en période de vacance scolaire (ref: CAL_SCOLAIRE)</p>
-<pre><code>[{"calendar":{"is":["CAL_SCOLAIRE"]}}]</code></pre>
+<pre><code class="language-json">[{"line":{"is":["LA","LB","LC"]}}]</code></pre>
+<p>Utilisable uniquement en période de vacances scolaires (ref: CAL_SCOLAIRE) :</p>
+<pre><code class="language-json">[{"calendar":{"is":["CAL_SCOLAIRE"]}}]</code></pre>
 <p>Utilisable sur le réseau scolaire (ref: RESEAU_SCOLAIRE) :</p>
-<pre><code>[{"network":{"is":["RESEAU_SCOLAIRE"]}}]</code></pre>
-<p>Utilisable sur le réseau scolaire la semaine et sur le réseau urbain le weekend</p>
-<pre><code>[{"network":{"is":["RESEAU_SCOLAIRE"]}, "weekday": {"is":["1111100"]}},{"network":{"is":["RESEAU_URBAIN"]}, "weekday": {"is":["0000011"]}}]</code></pre>
-<p>Utilisable sur la ligne LA ou LB ou LC :</p>
-<pre><code>[{"line":{"is":["LA","LB","LC"]}}</code></pre>
-<p>Utilisable partout sauf sur ligne TAD:</p>
-<pre><code>[{"line":{"isnot":["TAD"]}}</code></pre>
+<pre><code class="language-json">[{"network":{"is":["RESEAU_SCOLAIRE"]}}]</code></pre>
+<p>Utilisable sur le réseau scolaire la semaine et sur le réseau urbain le week-end :</p>
+<pre><code class="language-json">[{"network":{"is":["RESEAU_SCOLAIRE"]}, "weekday": {"is":["1111100"]}},{"network":{"is":["RESEAU_URBAIN"]}, "weekday": {"is":["0000011"]}}]</code></pre>
+<p>Utilisable partout sauf sur la ligne TAD (avec ignorance de la restriction si la ligne n'est pas connue dans le contexte) :</p>
+<pre><code class="language-json">[{"line":{"isnot":["TAD"],"ignoreIfMissing":true}}]</code></pre>
+<h3 id="restrictions-doriginedestination-od">Restrictions d'Origine/Destination (OD)</h3>
+<p>Le critère <code>od</code> permet de restreindre l'usage d'un titre à un trajet précis d'origine à destination. </p>
+<p>Chaque objet d'une restriction OD se structure ainsi :</p>
+<ul>
+<li><code>location</code> : Objet contenant l'origine <code>o</code> et la destination <code>d</code> via leurs références (<code>ext_ref</code>).</li>
+<li><code>type</code> : Spécifie si la restriction s'applique à des arrêts commerciaux (<code>"STOPAREA"</code>) ou à des zones tarifaires (<code>"FARE_ZONE"</code>).</li>
+<li><code>allowIntermediate</code> : Booléen (ou <code>null</code>) indiquant si les arrêts intermédiaires sont acceptés (trajet zonal ou flexible).</li>
+<li><code>symmetric</code> : Booléen indiquant si la restriction est bidirectionnelle (l'aller et le retour sont possibles avec le même titre).</li>
+</ul>
+<p><em>Remarque : Les règles de type &quot;isnot&quot; ne sont pas supportées pour les critères OD.</em></p>
+<h4 id="exemples-de-json-od">Exemples de JSON OD</h4>
+<p>Restriction OD stricte (sur arrêts commerciaux, non-symétrique) :</p>
+<pre><code class="language-json">[
+  {
+    "od": {
+      "is": [
+        {
+          "location": {
+            "o": "ORIGIN_STOPAREA_REF",
+            "d": "DESTINATION_STOPAREA_REF"
+          },
+          "type": "STOPAREA",
+          "allowIntermediate": null,
+          "symmetric": false
+        }
+      ]
+    }
+  }
+]</code></pre>
+<p>Restriction OD symétrique (sur arrêts commerciaux, aller et retour autorisés) :</p>
+<pre><code class="language-json">[
+  {
+    "od": {
+      "is": [
+        {
+          "location": {
+            "o": "ORIGIN_STOPAREA_REF",
+            "d": "DESTINATION_STOPAREA_REF"
+          },
+          "type": "STOPAREA",
+          "allowIntermediate": null,
+          "symmetric": true
+        }
+      ]
+    }
+  }
+]</code></pre>
+<p>Restriction OD zonale (sur zones tarifaires, symétrique et flexible avec arrêts intermédiaires autorisés) :</p>
+<pre><code class="language-json">[
+  {
+    "od": {
+      "is": [
+        {
+          "location": { 
+            "o": "ORIGIN_ZONE_REF", 
+            "d": "DESTINATION_ZONE_REF" 
+          },
+          "type": "FARE_ZONE",
+          "allowIntermediate": true,
+          "symmetric": true
+        }
+      ]
+    }
+  }
+]</code></pre>
                     </div>
 
                     <footer>
@@ -151,7 +229,7 @@ La condition est également un objet du type <code>{"is":[REFERENCE_A, REFERENCE
                                     Find GPFS Reference on <a href="https://github.com/ubitransports/gpfs">GitHub</a>.
                                 </p>
                             </div>
-                                                GPFS standard is defined by <a href="http://www.ubitransports.com" target="_blank">Ubi Transports</a>.<br/>
+                                                GPFS standard is defined by <a href="https://matawan-mobility.com/" target="_blank">Matawan</a>.<br/>
                         Built with <a href="http://couscous.io/">Couscous</a> using a <a href="https://github.com/CouscousPHP/Template-ReadTheDocs">theme</a> based on <a href="https://readthedocs.org/">Read the Docs</a>.
                     </footer>
 

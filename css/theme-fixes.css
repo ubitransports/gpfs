@@ -36,7 +36,7 @@ table tbody tr:last-child td { border-bottom: none; }
 
 
 .wy-nav-content{ max-width:100% !important; }
-.wy-nav-content-wrap a, .wy-nav-content-wrap a:hover, .wy-nav-content-wrap a:visited{ color:#2980B9; }
+.wy-nav-content-wrap a, .wy-nav-content-wrap a:hover, .wy-nav-content-wrap a:visited{ color:#673FFF; }
 
 
 ul,ol,dl{margin-left:10px;padding-left:20px;}
